@@ -3,60 +3,61 @@
   margin: 0;
   padding: 0;
 }
-ul, li {
+ul,
+li {
   list-style: none;
 }
 /* Highier level containers states */
-.weather-container_main {
+.widget-container {
   width: 800px;
   height: 600px;
   margin: auto;
   padding: 80px 110px;
-  font-family: 'Dosis', sans-serif;
-  font-weight: normal;
-  background-image: url("./assets/images/bg/Tokyo-bg.png");
+  background-image: url('./assets/images/bg/Tokyo-bg.png');
   border-radius: 10px;
-  color: white;
-  cursor: default;
 }
-.weather-container_widget {
+.widget {
   display: flex;
   flex-flow: column wrap;
   width: 580px;
   height: 437px;
+  font-family: 'Dosis', sans-serif;
+  font-weight: normal;
+  color: white;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.55);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.55);
+  cursor: default;
 }
 /* First container state */
-.weather-container_first-half {
+.widget-current-weather {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 290px;
   text-align: center;
-  background-image: url("./assets/images/bg/Tokyo-bg-inner.png");
+  background-image: url('./assets/images/bg/Tokyo-bg-inner.png');
   border-right: 1px solid rgba(51, 33, 38);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-.current-weather__state {
+.widget-current-weather__icon-container {
   flex: 3;
   padding-top: 43px;
 }
-.current-weather__state_image {
+.widget-current-weather__icon {
   width: 142px;
   height: 142px;
 }
-.current-weather__desc {
+.widget-current-weather__mood {
   flex: 1;
   padding-top: 24px;
   font-weight: 200;
   font-size: 36px;
   background: rgba(53, 27, 36, 0.9);
 }
-.current-weather__date {
+.widget-current-weather__date {
   flex: 1;
   padding-top: 40px;
   font-weight: 300;
@@ -65,7 +66,7 @@ ul, li {
   border-bottom-left-radius: 5px;
 }
 /* Second container state */
-.weather-container_second-half {
+.widget-state {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,20 +79,20 @@ ul, li {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.current-weather__temperature {
+.widget-state__temperature {
   font-weight: 200;
   font-size: 101px;
   color: #7b1f27;
-  border-bottom: 1px solid #7b1f27; 
+  border-bottom: 1px solid #7b1f27;
 }
-.current-weather__graph {
-  border-bottom: 1px solid #7b1f27; 
+.widget-state__graph-container {
+  border-bottom: 1px solid #7b1f27;
 }
-.current-weather__graph_image {
+.widget-state__graph {
   position: relative;
   bottom: 15px;
 }
-.current-weather__next-days {
+.widget-next-days {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -99,23 +100,23 @@ ul, li {
   font-weight: 600;
   font-size: 16px;
 }
-.day {
+.next-day {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-.current-weather__day {
+.next-day__week-day {
   width: 45px;
   padding-bottom: 10px;
   text-align: center;
   border-bottom: 1px solid #7b1f27;
 }
-.day-props {
+.next-day__week-day_day-props {
   margin-top: 10px;
   color: #7b1f27;
 }
-.night-props {
+.next-day__week-day_night-props {
   margin-top: 5px;
   padding-bottom: 5px;
   color: #332126;

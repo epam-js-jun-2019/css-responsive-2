@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tokyo Weather Widget</title>
+  </head>
+  <body>
+    <article class="widget-container">
+      <div class="widget">
+        <div class="widget-current-weather">
+          <div class="widget-current-weather__icon-container">
+            <img
+              class="widget-current-weather__icon"
+              src="./assets/images/icons/sun-ico.png"
+              alt="sun icon"
+            />
+          </div>
+          <p class="widget-current-weather__mood">Sunny</p>
+          <p class="widget-current-weather__date">Tokyo - Wednesday, July 31</p>
+        </div>
+        <div class="widget-state">
+          <div class="widget-state__temperature"><p>28 &deg;C</p></div>
+          <div class="widget-state__graph-container">
+            <img
+              class="widget-state__graph"
+              src="./assets/images/graph.png"
+              alt="weather graph"
+            />
+          </div>
+          <ul class="widget-next-days">
+            <li class="next-day">
+              <img
+                class="day_symb"
+                src="./assets/images/icons/sunny.png"
+                alt="sunny icon"
+              />
+              <div class="next-day__week-day next-day__week-day_day-props">
+                Thu
+              </div>
+              <p class="next-day__week-day_day-props">28&deg;C</p>
+              <p class="next-day__week-day_night-props">18&deg;C</p>
+            </li>
+            <li class="next-day">
+              <img
+                class="day_symb"
+                src="./assets/images/icons/cloudy.png"
+                alt="cloudy icon"
+              />
+              <p class="next-day__week-day next-day__week-day_day-props">Fri</p>
+              <p class="next-day__week-day_day-props">22&deg;C</p>
+              <p class="next-day__week-day_night-props">20&deg;C</p>
+            </li>
+            <li class="next-day">
+              <img
+                class="day_symb"
+                src="./assets/images/icons/cloudy.png"
+                alt="cloudy icon"
+              />
+              <p class="next-day__week-day next-day__week-day_day-props">Sat</p>
+              <p class="next-day__week-day_day-props">30&deg;C</p>
+              <p class="next-day__week-day_night-props">27&deg;C</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>
