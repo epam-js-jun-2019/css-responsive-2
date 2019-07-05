@@ -101,7 +101,9 @@ body {
 }
 
 .weather__city {
-  margin-bottom: 10px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 5%;
 }
 
 /* Invisible elements before hover */
@@ -136,7 +138,8 @@ body {
   z-index: 1;
 }
 
-.weather__day-info {
+.weather__day-info,
+.weather__day-info_invisible {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -150,15 +153,16 @@ body {
   margin-top: 10px;
 
   z-index: 2;
+
+  font-size: 12pt;
+}
+
+.weather__day-info_invisible {
+  display: none;
 }
 
 .weather__image_small {
   width: 30px;
-}
-
-.weather__day,
-.weather__temperature {
-  font-size: 12pt;
 }
 
 /* Styles for hover */
@@ -200,6 +204,104 @@ body {
 
 
 /* Media */
+@media (min-width: 1300px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  .weather {
+    width: 350px;
+    height: 350px;
+  }
+
+  .row {
+    max-width: 1050px;
+  }
+
+  .weather__image_large {
+    width: 140px;
+  }
+
+  .weather__day-info_invisible {
+    display: flex;
+  }
+
+  .weather__day-info,
+  .weather__day-info_invisible {
+    width: 10%;
+    height: 60%;
+  }
+
+  .weather:hover .weather__image_large {
+    display: flex;
+    
+    width: 105px;
+  }
+}
+
+@media (min-width: 1600px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  .weather {
+    width: 400px;
+    height: 400px;
+  }
+
+  .row {
+    max-width: 1200px;
+  }
+
+  .weather__image_large {
+    width: 160px;
+  }
+
+  .weather__day-info,
+  .weather__day-info_invisible {
+    height: 55%;
+
+    font-size: 13pt;
+  }
+
+  .weather:hover .weather__image_large {
+    display: flex;
+    
+    width: 115px;
+  }
+}
+
+@media (min-width: 2000px) {
+  body {
+    font-size: 2rem;
+  }
+
+  .weather {
+    width: 450px;
+    height: 450px;
+  }
+
+  .row {
+    max-width: 1500px;
+  }
+
+  .weather__image_large {
+    width: 180px;
+  }
+
+  .weather__day-info,
+  .weather__day-info_invisible {
+    height: 53%;
+
+    font-size: 14pt;
+  }
+
+  .weather:hover .weather__image_large {
+    display: flex;
+    
+    width: 130px;
+  }
+}
 
 @media (max-width: 768px) {
   body {
