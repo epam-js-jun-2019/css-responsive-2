@@ -9,13 +9,11 @@ body {
 }
 
 .widget{
-  height: 35%;
   width: 30%;
   min-width : 300px;
 
   background-color: white;
-  border-radius: 10px;
-  
+  border-radius: 1rem;
   
   &__refresh-icon{
     padding: 10px;
@@ -28,10 +26,61 @@ body {
     justify-content: center;
   }
   &__information-row{
-    padding: 10px;
-    display : flex;
+    display: flex;
+    justify-content: space-between;
+    margin-top : 1rem; 
+    padding: 10px 0px 10px 10px;
     align-items : center;
   }
-
-
+  &__temp-info{
+    font-size : 3rem;
+  }
+  &__city-info{
+    display:flex;
+    flex-direction: column;
+  }
+  &__day-info{
+    display : flex;
+    flex-direction: column;
+    background-color: aqua;
+    width: 3rem;
+    height:4rem;
+    align-items: center;
+    justify-content: center;
+    color :white;
+  }
+  &__bottom{
+    background-color : lightgray;
+    color : white;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  &__stats{
+    display : flex;
+    justify-content: space-between;
+    padding : 2rem;
+  }
+  &__wind{
+    display :flex;
+    align-items: center;
+  }
+  &__waterdrop{
+    display :flex;
+    align-items: center;
+  }
+  &__sun{
+    display :flex;
+    align-items: center;
+  }
+  &__stat-img{
+    margin-right: 1rem;
+  }
+  &__pagination{
+    display : flex;
+    padding: 1rem;
+    justify-content: center;
+  }
+  &__pag-dot{
+    margin-right: 1rem;
+  }
 }

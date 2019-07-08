@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css" />
-    <link rel="stylesheet" href="style/style_flexbox.css" />
-    <title>New Jersey</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="widget">
-      <div class="widget__refresh-icon">
-        <img src="refresh.png">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css" />
+  <link rel="stylesheet" href="style/style_flexbox.css" />
+  <title>New Jersey</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="widget">
+    <div class="widget__refresh-icon">
+      <img src="refresh.png">
+    </div>
+    <div class="widget__cloud-icon">
+      <img src="cloud_icon.png" alt="">
+    </div>
+    <div class="widget__information-row">
+      <span class="widget__temp-info">
+        79&deg;
+      </span>
+      <div class="widget__city-info">
+        <span class="widget__city-top-text">
+          Cloudy Skies
+        </span>
+        <span class="widget__city-bottom-text">
+          Sicklerville, New Jersey
+        </span>
       </div>
-      <div class="widget__cloud-icon">
-        <img src="cloud_icon.png" alt="">
-      </div>
-      <div class="widget__information-row">
-          <div class="widget__temp-icon">
-              <img src="tempIcon.png" alt="">
-          </div>
-          <div class="widget__city-info">
-            <div class="widget__city-top-text">
-
-            </div>
-            <div class="widget__city-bottom-text">
-
-            </div>
-          </div>
-          <div class="widget__day-info">
-              <span class="widget__month">
-
-              </span>
-              <span class="day-number">
-                
-              </span>
-          </div>
+      <div class="widget__day-info">
+        <span class="widget__month">
+          MAY
+        </span>
+        <span class="day-number">
+          21
+        </span>
       </div>
     </div>
 
-  </body>
+    <div class="widget__bottom">
+      <div class="widget__stats">
+        <div class="widget__wind">
+          <img src="wind.png" alt="" class="widget__stat-img">
+          <span>2MPH</span>
+        </div>
+        <div class="widget__waterdrop">
+          <img src="waterdrop.png" alt="" class="widget__stat-img">
+          <span>33%</span>
+        </div>
+        <div class="widget__sun">
+          <img src="sun.png" alt="" class="widget__stat-img">
+          <span>83%</span>
+        </div>
+      </div>
+      <div class="widget__pagination">
+        <img src="dot1.png" alt="" class="widget__pag-dot">
+        <img src="dot2.png" alt="" class="widget__pag-dot">
+        <img src="dot3.png" alt="" >
+      </div>
+    </div>
+  </div>
+
+</body>
+
 </html>
