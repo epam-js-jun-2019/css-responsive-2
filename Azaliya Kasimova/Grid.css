@@ -4,9 +4,9 @@ section {
   width: 610px;
   height: 410px;
   background-image: url(img/background.jpg);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 .cub1 {
   width: 203px;
