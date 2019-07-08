@@ -1,0 +1,173 @@
+@media screen and (max-width: 591px) {
+    .widjet {
+        width: 94vw;
+    }
+
+    .widjet__leftside,
+    .widjet__rightside {
+        width: 47vw;
+    }
+
+    .widjet__rightside {
+        padding: 0 21px 0 21px;
+    }
+
+    .widjet__temperature-inner,
+    .graph-inner,
+    .days-inner {
+        width: 90%;
+    }
+
+    .graph {
+        width: 100%;
+    }
+
+    .widjet__temperature {
+        font-size: 16vw;
+    }
+}
+
+@media screen and (max-width: 485px) {
+
+    .main-container {
+        padding-top: 18px;
+    }
+
+    .widjet {
+        width: 290px;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .widjet__leftside,
+    .widjet__rightside {
+        width: 100%;
+        border: none;
+        border-radius: unset;
+    }
+
+    .widjet__leftside {
+        min-height: 40%;
+        background-position: 0 -5vh;
+        border-radius: unset;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+
+    .widjet__rightside {
+        min-height: 50%;
+        padding: 0 31px 0 31px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    .big-sun-icon {
+        width: 105px;
+        height: auto;
+        margin: 15px 0;
+    }
+
+    .widjet__weather-inner,
+    .widjet__info-inner {
+        height: 60px;
+    }
+
+    .widjet__temperature-inner {
+        height: 106px;
+        margin: 0;
+        margin-top: -12px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .widjet__temperature {
+        font-size: 90px;
+    }
+
+    .graph-inner {
+        width: 90%;
+        height: auto;
+        padding: 8px 0;
+    }
+
+    .day__icon-inner {
+        height: 40px;
+        padding: 7px 0;
+    }
+
+    .day__weekday-inner {
+        line-height: 16px;
+    }
+
+    .day__temperature-inner {
+        padding-top: 10px;
+        line-height: 12px;
+    }
+}
+
+@media screen and (max-width: 290px) {
+
+    .main-container {
+        padding-top: 10vw;
+    }
+
+    .widjet {
+        width: 100%;
+    }
+
+    .widjet__leftside {
+        min-height: 40%;
+    }
+
+    .widjet__rightside {
+        min-height: 50%;
+        padding: 0 5%;
+    }
+
+    .big-sun-icon {
+        width: 100px;
+        height: auto;
+        margin: 15px 0;
+    }
+
+    .widjet__weather-inner,
+    .widjet__info-inner {
+        height: 24vw;
+    }
+
+    .widjet__weather {
+        font-size: 12vw;
+    }
+
+    .widjet__info {
+        font-size: 9vw;
+    }
+
+    .widjet__temperature-inner {
+        width: 90%;
+        height: 39vw;
+        margin: 0;
+        margin-top: -15px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .widjet__temperature {
+        font-size: 35vw;
+    }
+
+    .graph {
+        width: 80vw;
+    }
+
+    .days-inner {
+        width: 90%;
+    }
+
+    .day {
+        width: auto;
+        flex-grow: 1;
+    }
+}
