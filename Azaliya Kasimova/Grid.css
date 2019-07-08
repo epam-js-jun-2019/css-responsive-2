@@ -5,44 +5,59 @@ section {
   height: 410px;
   background-image: url(img/background.jpg);
   display: grid;
+  display: -ms-grid;
   grid-template-rows: repeat(2, 1fr);
+  -ms-grid-rows: 1fr 1fr;
   grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: 1fr 1fr 1fr;
 }
 .cub1 {
   width: 203px;
   height: 205px;
   background-color: rgb(6, 179, 219);
   text-align: center;
+  -ms-grid-column: 1;
+  -ms-grid-row: 1;
 }
 .cub2 {
   width: 204px;
   height: 205px;
   background-color: rgb(78, 212, 134);
   text-align: center;
+  -ms-grid-column: 2;
+  -ms-grid-row: 1;
 }
 .cub3 {
   width: 203px;
   height: 205px;
   background-color: rgb(97, 57, 246);
   text-align: center;
+  -ms-grid-column: 3;
+  -ms-grid-row: 1;
 }
 .cub4 {
   width: 203px;
   height: 205px;
   background-color: rgb(227, 182, 61);
   text-align: center;
+  -ms-grid-column: 1;
+  -ms-grid-row: 2;
 }
 .cub5 {
   width: 204px;
   height: 205px;
   background-color: rgb(220, 61, 102);
   text-align: center;
+  -ms-grid-column: 2;
+  -ms-grid-row: 2;
 }
 .cub6 {
   width: 203px;
   height: 205px;
   background-color: rgb(189, 84, 205);
   text-align: center;
+  -ms-grid-column: 3;
+  -ms-grid-row: 2;
 }
 .cub1 img, .cub2 img, .cub3 img {
   margin-top: 43px;
