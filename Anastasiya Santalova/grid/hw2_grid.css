@@ -4,6 +4,8 @@ html {
 }
 
 body {
+  box-sizing: border-box;
+
   width: 100%;
   height: 100%;
 
@@ -11,7 +13,7 @@ body {
   min-height: 320px;
 
   margin: 0;
-  padding: 0;
+  padding: 30px;
 
   font-size: 15pt;
   font-family: "Avenir Next", monospace;
@@ -38,8 +40,8 @@ body {
   ". worange wpink wpurple ."
   ". . . . .";
   
-  grid-template-columns: 1fr 274px 274px 274px 1fr;
-  grid-template-rows: 1fr 274px 274px 1fr;
+  grid-template-columns: 1fr repeat(3, 274px) 1fr;
+  grid-template-rows: 1fr repeat(2, 274px) 1fr;
 }
 
 .weather {
@@ -53,48 +55,36 @@ body {
 
 .weather-skyblue {
   grid-area: wskyblue;
-  grid-column: 2 / 2;
-  grid-row: 2 / 2;
 
   background-color: #06b3db;
 }
 
 .weather-green {
   grid-area: wgreen;
-  grid-column: 3 / 3;
-  grid-row: 2 / 2;
 
   background-color: #4ed486;
 }
 
 .weather-blue {
   grid-area: wblue;
-  grid-column: 4 / 4;
-  grid-row: 2 / 2;
 
   background-color: #6139f6;
 }
 
 .weather-orange {
   grid-area: worange;
-  grid-column: 2 / 2;
-  grid-row: 3 / 3;
 
   background-color: #e3b63d;
 }
 
 .weather-pink {
   grid-area: wpink;
-  grid-column: 3 / 3;
-  grid-row: 3 / 3;
-
+  
   background-color: #dc3d66;
 }
 
 .weather-purple {
   grid-area: wpurple;
-  grid-column: 4 / 4;
-  grid-row: 3 / 3;
 
   background-color: #db51e2;
 }
@@ -220,19 +210,16 @@ body {
 }
 
 
-/* Media
+/* Media */
+
 @media (min-width: 1300px) {
   body {
     font-size: 1.5rem;
   }
 
-  .weather {
-    width: 350px;
-    height: 350px;
-  }
-
-  .row {
-    max-width: 1050px;
+  .widget {
+    grid-template-columns: 1fr repeat(3, 350px) 1fr;
+    grid-template-rows: 1fr repeat(2, 350px) 1fr;
   }
 
   .weather__image_large {
@@ -261,13 +248,9 @@ body {
     font-size: 1.8rem;
   }
 
-  .weather {
-    width: 400px;
-    height: 400px;
-  }
-
-  .row {
-    max-width: 1200px;
+  .widget {
+    grid-template-columns: 1fr repeat(3, 400px) 1fr;
+    grid-template-rows: 1fr repeat(2, 400px) 1fr;
   }
 
   .weather__image_large {
@@ -293,13 +276,9 @@ body {
     font-size: 2rem;
   }
 
-  .weather {
-    width: 450px;
-    height: 450px;
-  }
-
-  .row {
-    max-width: 1500px;
+  .widget {
+    grid-template-columns: 1fr repeat(3, 450px) 1fr;
+    grid-template-rows: 1fr repeat(2, 450px) 1fr;
   }
 
   .weather__image_large {
@@ -320,13 +299,14 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 880px) {
   body {
     font-size: 14pt;
   }
 
-  .row {
-    max-width: 650px;
+  .widget {
+    grid-template-columns: 1fr repeat(3, 250px) 1fr;
+    grid-template-rows: 1fr repeat(2, 250px) 1fr;
   }
 
   .weather__image_small {
@@ -334,43 +314,41 @@ body {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 815px) {
+  body {
+    font-size: 14pt;
+  }
+
   .widget {
-    position: relative;
+    grid-template-columns: 1fr repeat(2, 250px) 1fr;
+    grid-template-rows: 1fr repeat(3, 250px) 1fr;
+
+    grid-template-areas:
+  ". . . ."
+  ". wskyblue wgreen ."
+  ". wblue worange ."
+  ". wpink wpurple ."
+  ". . . .";
+  }
+
+  .weather__image_small {
+    width: 28px;
   }
 }
 
-@media (max-width: 480px) {
-  .row {
-    max-width: 300px;
-  }
-
-}
-
-@media (max-width: 320px) {
-  .row {
-    max-width: 250px;
-  }
-
-  .weather {
-    width: 250px;
-    height: 250px;
-  }
-}
-
-@media (max-width: 840px) and (orientation: landscape) {
+@media (max-width: 565px) {
   .widget {
-    position: relative;
+    grid-template-columns: 1fr 250px 1fr;
+    grid-template-rows: 1fr repeat(6, 250px) 1fr;
+
+    grid-template-areas:
+  ". . ."
+  ". wskyblue ."
+  ". wgreen ."
+  ". wblue ."
+  ". worange ."
+  ". wpink ."
+  ". wpurple ."
+  ". . .";
   }
 }
-
-@media (max-width: 568px) and (orientation: landscape) {
-  .row {
-    max-width: 500px;
-  }
-
-  .weather {
-    width: 250px;
-    height: 250px;
-  }
-} */
