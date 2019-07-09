@@ -1,49 +1,58 @@
 body {
+  margin: 0;
+  padding: 0;
   background-color: #515c65;
   background-image: linear-gradient(to right, #33383c, #6f7980, #33383c);
   display: grid;
   grid-template: 3fr 4fr 3fr / 1fr 35% 1fr;
   width: 100%;
   height: 95vh;
-  margin: 0;
-  padding: 0;
+
   justify-items: center;
 }
 
 .widget {
-  display: grid;
-  grid-row-start: 2;
   max-width: 400px;
   min-width: 310px;
+
+  display: grid;
+  grid-template: 1fr 3fr 2fr 2fr;
+  grid-row-start: 2;
   grid-column-start: 2;
+
   background-color: white;
   border-radius: 1rem;
   font-family: "Cairo", sans-serif;
-  grid-template: 1fr 3fr 2fr 2fr;
+
   &__refresh-icon {
     padding: 1rem;
+
     justify-self: end;
   }
   &__cloud-icon {
     justify-self: center;
   }
   &__information-row {
-    grid-row-start: 3;
-    padding: 1rem 0rem 1rem 1rem;
     display: grid;
     grid-template: 3fr 1fr / 1fr 3fr 1fr;
+    grid-row-start: 3;
+
+    padding: 1rem 0rem 1rem 1rem;
   }
   &__temp-info {
     color: #a5acaf;
     font-size: 3rem;
+
     align-self: center;
   }
   &__city-info {
-    padding: 0.5rem;
-    color: #a5acaf;
     display: grid;
     grid-column-gap: 0;
     grid-template-rows: 1fr 1fr;
+
+    padding: 0.5rem;
+    color: #a5acaf;
+
     justify-self: center;
     align-self: center;
   }
@@ -55,14 +64,15 @@ body {
     align-self: center;
   }
   &__day-info {
-    font-family: "Russo One", sans-serif;
-    background-color: #54bae6;
-    color: white;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 3fr 1fr;
     grid-row-start: 1;
     grid-column-start: 4;
     grid-row-end: 3;
-    display: grid;
-    grid-template: 1fr 1fr / 1fr 3fr 1fr;
+
+    font-family: "Russo One", sans-serif;
+    background-color: #54bae6;
+    color: white;
   }
   &__month {
     grid-column-start: 2;
@@ -74,30 +84,31 @@ body {
     justify-self: center;
   }
   &__bottom {
-    background-color: #2e3335;
-    color: white;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
     display: grid;
     grid-template-rows: 3fr 1fr;
+
+    background-color: #2e3335;
+    color: white;
+    
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
   }
   &__stats {
     display: grid;
-    grid-template-columns: 4fr 3fr 3fr ;
+    grid-template-columns: 4fr 3fr 3fr;
     grid-column-gap: 1rem;
     justify-self: center;
     align-self: center;
-    
   }
-  &__sun{
-      align-self: center;
+  &__sun {
+    align-self: center;
   }
-  &__stat-img{
-      margin-right: 3px;
+  &__stat-img {
+    margin-right: 3px;
   }
   &__pagination {
-      padding-top: 1rem;
-      padding-bottom: 0.3rem;
+    padding-top: 1rem;
+    padding-bottom: 0.3rem;
     justify-self: center;
   }
 }

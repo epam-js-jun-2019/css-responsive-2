@@ -1,4 +1,6 @@
 body {
+  margin: 0;
+  padding: 0;
   background-color: #515c65;
   background-image: -webkit-gradient(linear, left top, right top, from(#33383c), color-stop(#6f7980), to(#33383c));
   background-image: linear-gradient(to right, #33383c, #6f7980, #33383c);
@@ -9,24 +11,22 @@ body {
       grid-template: 3fr 4fr 3fr / 1fr 35% 1fr;
   width: 100%;
   height: 95vh;
-  margin: 0;
-  padding: 0;
   justify-items: center;
 }
 
 .widget {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-row: 2;
-      grid-row-start: 2;
   max-width: 400px;
   min-width: 310px;
+  display: -ms-grid;
+  display: grid;
+  grid-template: 1fr 3fr 2fr 2fr;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
   -ms-grid-column: 2;
       grid-column-start: 2;
   background-color: white;
   border-radius: 1rem;
   font-family: "Cairo", sans-serif;
-  grid-template: 1fr 3fr 2fr 2fr;
 }
 
 .widget__refresh-icon {
@@ -41,14 +41,14 @@ body {
 }
 
 .widget__information-row {
-  -ms-grid-row: 3;
-      grid-row-start: 3;
-  padding: 1rem 0rem 1rem 1rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 3fr 1fr;
   -ms-grid-columns: 1fr 3fr 1fr;
       grid-template: 3fr 1fr / 1fr 3fr 1fr;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  padding: 1rem 0rem 1rem 1rem;
 }
 
 .widget__temp-info {
@@ -60,13 +60,13 @@ body {
 }
 
 .widget__city-info {
-  padding: 0.5rem;
-  color: #a5acaf;
   display: -ms-grid;
   display: grid;
   grid-column-gap: 0;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
+  padding: 0.5rem;
+  color: #a5acaf;
   -ms-grid-column-align: center;
       justify-self: center;
   -ms-grid-row-align: center;
@@ -86,19 +86,19 @@ body {
 }
 
 .widget__day-info {
-  font-family: "Russo One", sans-serif;
-  background-color: #54bae6;
-  color: white;
-  -ms-grid-row: 1;
-      grid-row-start: 1;
-  -ms-grid-column: 4;
-      grid-column-start: 4;
-  grid-row-end: 3;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr 1fr;
   -ms-grid-columns: 1fr 3fr 1fr;
       grid-template: 1fr 1fr / 1fr 3fr 1fr;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  grid-row-end: 3;
+  font-family: "Russo One", sans-serif;
+  background-color: #54bae6;
+  color: white;
 }
 
 .widget__month {
@@ -119,14 +119,14 @@ body {
 }
 
 .widget__bottom {
-  background-color: #2e3335;
-  color: white;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 3fr 1fr;
       grid-template-rows: 3fr 1fr;
+  background-color: #2e3335;
+  color: white;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .widget__stats {
