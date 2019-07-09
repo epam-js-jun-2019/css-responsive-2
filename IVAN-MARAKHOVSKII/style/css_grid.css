@@ -1,0 +1,10 @@
+body {
+  background-color: #515c65;
+  background-image: -webkit-gradient(linear, left top, right top, from(#33383c), color-stop(#6f7980), to(#33383c));
+  background-image: linear-gradient(to right, #33383c, #6f7980, #33383c);
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 95vh;
+}
+/*# sourceMappingURL=css_grid.css.map */
