@@ -1,0 +1,135 @@
+body {
+    background: url("../img/back_main.png") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-weight: 800;
+    font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.main-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    justify-content: center;
+    width: 615px;
+    height: 410px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.main-box .main-box__cities-cube {
+    height: 205px;
+    width: 205px;
+}
+
+.cities-cube {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.days .cities-cube_halfMoon,
+.days .cities-cube__days{
+    text-align: center;
+}
+
+.days .cities-cube_halfMoon img {
+    width: 65px;
+    margin-top: 25px;
+}
+
+.cities-cube img {
+    width: 85px;
+    height: 75px;
+}
+
+.cities-cube_halfMoon {
+    height: 50%;
+}
+
+.cities-cube__days {
+    margin-bottom: 10px;
+    height: 50%;
+}
+
+.cities-cube__days div p {
+    padding: 5px 5px;
+    margin: 0;
+}
+
+.cities-cube__days div img {
+    width: 25px;
+    height: 20px;
+}
+
+.chicago {
+    background-color: #00c2e3;
+}
+
+.seattle {
+    background-color: #59da99;
+}
+
+.brooklyn {
+    background-color: #7557f8;
+}
+
+.portland {
+    background-color: #eac24c;
+}
+
+.days {
+    background-color: #e65579;
+}
+
+.sanJose {
+    background-color: #cc70d8;
+}
+
+.cities-cube__days {
+    font-size: 13px;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    background-color: #cc4a6c;
+    background-size: cover;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media all and (max-width: 1200px) and (min-width: 320px) {
+    .main-box {
+        height: auto;
+        margin-bottom: 120px;
+        margin-top: 120px;
+        position: relative;
+        max-width: 100%;
+        -ms-box-orient: horizontal;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -moz-flex;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;   
+    }
+    .main-box__cities-cube {
+        -webkit-box-flex: 1;
+        -ms-flex: auto;
+        flex: auto;
+    }
+}
+
