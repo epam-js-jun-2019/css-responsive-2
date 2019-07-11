@@ -1,0 +1,111 @@
+.widget {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 58rem;
+  height: 44rem;
+  margin: 6rem auto;
+  border-radius: 5px;
+  box-shadow: var(--shadow-dark);
+  overflow: hidden;
+
+  &__left-side {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-primary);
+    background-image: url(../assets/images/bg/Tokyo-bg-inner.png);
+    background-size: cover;
+    background-position: top;
+    border-right: 1px solid var(--color-tertiary);
+
+    & > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__main-icon-box {
+    flex-basis: 24rem;
+  }
+
+  &__main-icon {
+    width: 17rem;
+    height: 17rem;
+    fill: var(--color-primary);
+  }
+
+  &__weather-desc {
+    width: 100%;
+    flex-basis: 9.5rem;
+    font-size: 3.6rem;
+    font-weight: 300;
+    background-color: rgba(51, 33, 38, 0.9);
+  }
+
+  &__weather-date {
+    width: 100%;
+    flex-basis: 10.5rem;
+    font-size: 2.2rem;
+    font-weight: 200;
+    background-color: rgba(123, 31, 39, 0.9);
+  }
+
+  &__right-side {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    color: var(--color-secondary);
+
+    & > * {
+      display: flex;
+      width: 100%;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--color-secondary);
+      }
+    }
+  }
+
+  &__main-temperature {
+    font-size: 10rem;
+    font-weight: 200;
+  }
+
+  &__graph-box {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  &__graph-img {
+    img {
+      width: 21rem;
+      height: 8rem;
+    }
+  }
+
+  &__weekly-weather {
+    display: flex;
+  }
+
+  &__week-day {
+    width: 100%;
+  }
+
+  &__icon-box {
+  }
+
+  &__week-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  &__week-temperature {
+  }
+}

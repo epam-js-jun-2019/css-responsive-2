@@ -1,0 +1,102 @@
+:root {
+  --color-primary: #fff;
+  --color-secondary: rgb(123, 31, 39);
+  --color-tertiary: rgb(51, 33, 38);
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  min-height: 100vh;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 400; }
+
+.widget {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 58rem;
+  height: 44rem;
+  margin: 6rem auto;
+  border-radius: 5px;
+  box-shadow: var(--shadow-dark);
+  overflow: hidden; }
+  .widget__left-side {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-primary);
+    background-image: url(../assets/images/bg/Tokyo-bg-inner.png);
+    background-size: cover;
+    background-position: top;
+    border-right: 1px solid var(--color-tertiary); }
+    .widget__left-side > * {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+  .widget__main-icon-box {
+    flex-basis: 24rem; }
+  .widget__main-icon {
+    width: 17rem;
+    height: 17rem;
+    fill: var(--color-primary); }
+  .widget__weather-desc {
+    width: 100%;
+    flex-basis: 9.5rem;
+    font-size: 3.6rem;
+    font-weight: 300;
+    background-color: rgba(51, 33, 38, 0.9); }
+  .widget__weather-date {
+    width: 100%;
+    flex-basis: 10.5rem;
+    font-size: 2.2rem;
+    font-weight: 200;
+    background-color: rgba(123, 31, 39, 0.9); }
+  .widget__right-side {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    color: var(--color-secondary); }
+    .widget__right-side > * {
+      display: flex;
+      width: 100%; }
+      .widget__right-side > *:not(:last-child) {
+        border-bottom: 1px solid var(--color-secondary); }
+  .widget__main-temperature {
+    font-size: 10rem;
+    font-weight: 200; }
+  .widget__graph-box {
+    display: flex;
+    justify-content: center;
+    align-content: center; }
+  .widget__graph-img img {
+    width: 21rem;
+    height: 8rem; }
+  .widget__weekly-weather {
+    display: flex; }
+  .widget__week-day {
+    width: 100%; }
+  .widget__week-icon {
+    width: 4rem;
+    height: 4rem; }
