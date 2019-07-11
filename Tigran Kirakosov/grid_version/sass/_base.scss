@@ -1,0 +1,54 @@
+:root {
+  --color-primary: #fff;
+
+  --color-secondary: rgb(123, 31, 39);
+
+  --color-tertiary: rgb(51, 33, 38);
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1 rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1 rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(phone) {
+    font-size: 25%; // 1 rem = 4px, 4/16 = 25%
+  }
+
+  @include respond(big-desctop) {
+    font-size: 75%; // 1 rem = 12, 12/16 = 75%
+  }
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 400;
+}

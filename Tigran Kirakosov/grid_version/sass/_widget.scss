@@ -1,0 +1,91 @@
+.widget {
+  max-width: 58rem;
+  height: 44rem;
+  border-radius: 5px;
+  box-shadow: var(--shadow-dark);
+  overflow: hidden;
+
+  &__left-side {
+    color: var(--color-primary);
+    background-image: url(../assets/images/bg/Tokyo-bg-inner.png);
+    background-size: cover;
+    background-position: top;
+    border-right: 1px solid var(--color-tertiary);
+  }
+
+  &__main-icon-box {
+  }
+
+  &__main-icon {
+    width: 17rem;
+    height: 17rem;
+    fill: var(--color-primary);
+  }
+
+  &__weather-desc {
+    width: 100%;
+    font-size: 3.6rem;
+    font-weight: 300;
+    background-color: rgba(51, 33, 38, 0.9);
+  }
+
+  &__weather-date {
+    width: 100%;
+    font-size: 2.2rem;
+    font-weight: 200;
+    background-color: rgba(123, 31, 39, 0.9);
+  }
+
+  &__right-side {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+
+    & > * {
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--color-secondary);
+      }
+    }
+  }
+
+  &__main-temperature {
+    font-size: 10rem;
+    font-weight: 200;
+  }
+
+  &__graph-box {
+  }
+
+  &__graph-img {
+    width: 21rem;
+    height: 8rem;
+  }
+
+  &__weekly-weather {
+  }
+
+  &__week-day {
+  }
+
+  &__week-icon {
+    width: 5rem;
+    height: 5rem;
+    fill: var(--color-secondary);
+  }
+
+  &__week-temperature {
+    height: 100%;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    li:first-child {
+      width: 90%;
+      line-height: 2;
+      text-align: center;
+      border-bottom: 1px solid var(--color-secondary);
+    }
+
+    li:last-child {
+      color: var(--color-tertiary);
+    }
+  }
+}
