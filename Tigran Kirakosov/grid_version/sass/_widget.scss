@@ -1,19 +1,29 @@
 .widget {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 1fr 1fr;
   max-width: 58rem;
   height: 44rem;
+  margin: 0 auto;
   border-radius: 5px;
   box-shadow: var(--shadow-dark);
-  overflow: hidden;
+  // overflow: hidden;
 
   &__left-side {
+    display: grid;
+    grid-template-rows: 24rem 9.5rem 10.5rem;
+    grid-template-columns: 1fr;
     color: var(--color-primary);
     background-image: url(../assets/images/bg/Tokyo-bg-inner.png);
     background-size: cover;
     background-position: top;
     border-right: 1px solid var(--color-tertiary);
-  }
 
-  &__main-icon-box {
+    & > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__main-icon {
@@ -37,6 +47,11 @@
   }
 
   &__right-side {
+    display: grid;
+    grid-template-rows: 14rem 10rem 20rem;
+    grid-template-columns: 1fr;
+    padding: 0 4rem;
+
     background-color: var(--color-primary);
     color: var(--color-secondary);
 
@@ -52,18 +67,28 @@
     font-weight: 200;
   }
 
-  &__graph-box {
-  }
-
   &__graph-img {
     width: 21rem;
     height: 8rem;
   }
 
   &__weekly-weather {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
   }
 
   &__week-day {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+
+  &__icon-box {
+    padding-top: 1.5rem;
   }
 
   &__week-icon {
@@ -73,15 +98,24 @@
   }
 
   &__week-temperature {
+    display: grid;
+    grid-template-rows: 5rem 3rem 3rem;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
     height: 100%;
     font-size: 1.6rem;
     font-weight: 600;
 
     li:first-child {
-      width: 90%;
-      line-height: 2;
+      width: 150%;
+      line-height: 2.5;
       text-align: center;
       border-bottom: 1px solid var(--color-secondary);
+    }
+
+    li:nth-child(2) {
+      margin-top: 1rem;
     }
 
     li:last-child {
