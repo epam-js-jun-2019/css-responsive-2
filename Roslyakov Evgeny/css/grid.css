@@ -136,3 +136,166 @@ body {
 .day__temperature_black {
     color: rgb(0, 0, 0);
 }
+
+@media screen and (max-width: 591px) {
+    .main-container {
+        width: 100vw;
+        padding-top: 15vw;
+    }
+
+    .widjet {
+        width: 94vw;
+        height: auto;
+    }
+
+    .widjet__leftside {
+        grid-template-rows: auto 15vw 16vw;
+    }
+
+    .big-sun-icon {
+        width: 25vw;
+        height: auto;
+    }
+
+    .widjet__weather-inner {
+        padding-top: 4vw;
+    }
+
+    .widjet__weather {
+        font-size: 6vw;
+    }
+
+    .widjet__info-inner {
+        padding-top: 4vw;
+    }
+
+    .widjet__info {
+        font-size: 4vw;
+    }
+
+    .widjet__rightside {
+        grid-gap: 1vw;
+        grid-template-columns: 3vw auto 3vw;
+        grid-template-rows: 24vw 18vw auto;
+    }
+
+    .widjet__temperature {
+        font-size: 18vw;
+    }
+
+    .widjet__temperature-inner,
+    .graph-inner,
+    .days-inner {
+        width: 39vw;
+    }
+
+    .graph-inner {
+        padding-top: 4vw;
+    }
+
+    .graph {
+        width: 100%;
+    }
+
+    .days-inner {
+        grid-gap: 3vw;
+        margin-bottom: 4vw;
+    }
+
+    .day {
+        grid-template-rows: 11vw 9vw 9vw 9vw;
+    }
+
+    .day__weekday-inner,
+    .day__temperature-inner,
+    .day__icon-inner {
+        padding-top: 3vw;
+    }
+
+    .day__icon {
+        width: 9vw;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .container {
+        display: block;
+    }
+
+    .widjet {
+        width: 90vw;
+    }
+
+    .widjet__leftside {
+        grid-template-rows: auto 24vw 24vw;
+        border: none;
+        border-top-right-radius: 4px;
+    }
+
+    .big-sun-icon {
+        width: 36vw;
+        height: auto;
+        margin: 7vw auto;
+    }
+
+    .widjet__weather-inner {
+        padding-top: 5vw;
+    }
+
+    .widjet__weather {
+        font-size: 10vw;
+    }
+
+    .widjet__info-inner {
+        padding-top: 5vw;
+        border: none;
+    }
+
+    .widjet__info {
+        font-size: 8vw;
+    }
+
+    .widjet__rightside {
+        grid-template-columns: 10vw auto 10vw;
+        grid-template-rows: 46vw 35vw auto;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    .widjet__temperature {
+        font-size: 33vw;
+    }
+
+    .widjet__temperature-inner,
+    .graph-inner,
+    .days-inner {
+        width: 70vw;
+    }
+
+    .graph-inner {
+        padding-top: 8vw;
+    }
+
+    .graph {
+        width: 100%;
+    }
+
+    .days-inner {
+        grid-gap: 2vw;
+        margin-bottom: 8vw;
+    }
+
+    .day {
+        grid-template-rows: 22vw 18vw 18vw 18vw;
+    }
+
+    .day__weekday-inner,
+    .day__temperature-inner,
+    .day__icon-inner {
+        padding-top: 4vw;
+    }
+
+    .day__icon {
+        width: 18vw;
+    }
+}
