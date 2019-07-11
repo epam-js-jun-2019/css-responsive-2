@@ -66,7 +66,7 @@ li {
   border-bottom-left-radius: 5px;
 }
 /* Second container state */
-.widget-state {
+.widget-weather-state {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,16 +79,16 @@ li {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.widget-state__temperature {
+.widget-weather-state__temperature {
   font-weight: 200;
   font-size: 101px;
   color: #7b1f27;
   border-bottom: 1px solid #7b1f27;
 }
-.widget-state__graph-container {
+.widget-weather-state__graph-container {
   border-bottom: 1px solid #7b1f27;
 }
-.widget-state__graph {
+.widget-weather-state__graph {
   position: relative;
   bottom: 15px;
 }
