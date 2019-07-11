@@ -1,3 +1,19 @@
+/*  MEDIA QUERY MANAGER
+
+0 - 600px:        Phone
+600 - 900px:      Tablet portrait
+900 - 1200px:     Tablet landscape
+[1200 - 1800px] is where our normal styles applies
+1800px + :        Big desctop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desctop
+
+1em = 16px
+*/
 :root {
   --color-primary: #fff;
   --color-secondary: rgb(123, 31, 39);
@@ -22,6 +38,18 @@ li {
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 25%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   min-height: 100vh;
@@ -41,7 +69,7 @@ body {
   flex-wrap: wrap;
   max-width: 58rem;
   height: 44rem;
-  margin: 0 auto;
+  margin: 7rem auto;
   border-radius: 5px;
   box-shadow: var(--shadow-dark);
   overflow: hidden; }
@@ -124,7 +152,7 @@ body {
     font-size: 1.6rem;
     font-weight: 600; }
     .widget__week-temperature li:first-child {
-      width: 80%;
+      width: 90%;
       line-height: 2;
       text-align: center;
       border-bottom: 1px solid var(--color-secondary); }

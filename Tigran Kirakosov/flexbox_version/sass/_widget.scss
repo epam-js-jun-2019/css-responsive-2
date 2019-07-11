@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   max-width: 58rem;
   height: 44rem;
-  margin: 0 auto;
+  margin: 7rem auto;
   border-radius: 5px;
   box-shadow: var(--shadow-dark);
   overflow: hidden;
@@ -102,9 +102,6 @@
     margin: 2.5rem 0;
   }
 
-  &__icon-box {
-  }
-
   &__week-icon {
     width: 5rem;
     height: 5rem;
@@ -121,7 +118,7 @@
     font-weight: 600;
 
     li:first-child {
-      width: 80%;
+      width: 90%;
       line-height: 2;
       text-align: center;
       border-bottom: 1px solid var(--color-secondary);
