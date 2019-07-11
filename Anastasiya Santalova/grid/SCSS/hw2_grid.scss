@@ -1,0 +1,316 @@
+@import "variables";
+@import "mixin";
+
+
+// CSS Styles
+
+html {
+  @include fullScreen;
+}
+
+body {
+  box-sizing: border-box;
+
+  @include fullScreen;
+
+  min-width: 320px;
+  min-height: 320px;
+
+  margin: 0;
+  padding: 30px;
+
+  @include font(15pt, 600);
+
+  background-image: url(img/main-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.widget {
+  @include fullScreen;
+  
+  @include gridThreeColumns();
+}
+
+.weather {
+  @include fullScreen;
+
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.weather-skyblue {
+  grid-area: wskyblue;
+
+  background-color: $skyBlue;
+}
+
+.weather-green {
+  grid-area: wgreen;
+
+  background-color: $green;
+}
+
+.weather-blue {
+  grid-area: wblue;
+
+  background-color: $blue;
+}
+
+.weather-orange {
+  grid-area: worange;
+
+  background-color: $orange;
+}
+
+.weather-pink {
+  grid-area: wpink;
+  
+  background-color: $pink;
+}
+
+.weather-purple {
+  grid-area: wpurple;
+
+  background-color: $purple;
+}
+
+// Visible elements before hover
+
+.weather__block_visible {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  @include fullScreen;
+  padding-top: 20%;
+  padding-bottom: 15%;
+
+  .weather__image_large {
+    width: 110px;
+  }
+  
+  .weather__city {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 5%;
+  } 
+}
+
+// Invisible elements before hover
+
+.weather__block_invisible {
+  display: none;
+  position: relative;
+
+  .weather__background_transparency {
+    position: absolute;
+    box-sizing: border-box;
+  
+    @include fullScreen;
+  
+    background: radial-gradient(at center,  #7c7c7c, #000000);
+    opacity: 0.25;
+  
+    z-index: 1;
+  }
+
+  .weather__period-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  
+    padding: 0 30px;
+  
+    @include fullScreen;
+
+    .weather__day-info,
+    .weather__day-info_invisible {
+      @include dayInfo();
+
+      @include font(12pt, 600);
+
+      .weather__image_small {
+        width: 30px;
+      }
+    }
+
+    .weather__day-info_invisible {
+      display: none;
+    }
+  }
+}
+
+// Styles for hover
+
+.weather:hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .weather__block_visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    padding-top: unset;
+    padding-bottom: unset;
+
+    .weather__image_large {
+      display: flex;
+      
+      width: 85px;
+    }
+
+    .weather__city {
+      display: none;
+    }
+  }
+
+  .weather__block_invisible {
+    display: flex;
+  
+    box-sizing: border-box;
+  
+    width: 100%;
+    height: 90%;
+  }
+}
+
+
+// Media-queries
+
+@media (min-width: 1300px) {
+  body {
+    @include font(1.5rem, 600);
+  }
+
+  .widget {
+    @include gridThreeColumns(350px);
+  }
+
+  .weather__block_visible {
+    .weather__image_large {
+      width: 140px;
+    }
+  }
+
+  .weather__block_invisible {
+    .weather__period-info {
+      .weather__day-info,
+      .weather__day-info_invisible {
+        @include dayInfo(10%, 60%);
+      }
+    }
+  }
+
+  .weather:hover .weather__image_large {
+    display: flex;
+    
+    width: 105px;
+  }
+}
+
+@media (min-width: 1600px) {
+  body {
+    @include font(1.8rem);
+  }
+
+  .widget {
+    @include gridThreeColumns(400px);
+  }
+
+  .weather__block_visible {
+    .weather__image_large {
+      width: 160px;
+    }
+  }
+
+  .weather__block_invisible {
+    .weather__period-info {
+      .weather__day-info,
+      .weather__day-info_invisible {
+        @include dayInfo(10%, 55%);
+
+        @include font(13pt);
+      }
+    }
+  }
+
+  .weather:hover .weather__image_large {
+    display: flex;
+    
+    width: 115px;
+  }
+}
+
+@media (min-width: 2000px) {
+  body {
+    @include font(2rem);
+  }
+
+  .widget {
+    @include gridThreeColumns(450px);
+  }
+
+  .weather__block_visible {
+    .weather__image_large {
+      width: 180px;
+    }
+  }
+
+  .weather__block_invisible {
+    .weather__period-info {
+      .weather__day-info,
+      .weather__day-info_invisible {
+        @include dayInfo(10%, 53%);
+
+        @include font(14pt);
+      }
+    }
+  }
+
+  .weather:hover .weather__image_large {
+    display: flex;
+    
+    width: 130px;
+  }
+}
+
+@media (max-width: 880px) {
+  body {
+    @include font(14pt);
+  }
+
+  .widget {
+    @include gridThreeColumns(250px);
+  }
+
+  .weather__image_small {
+    width: 28px;
+  }
+}
+
+@media (max-width: 815px) {
+  .widget {
+    @include gridTwoColumns();
+  }
+
+  .weather__image_small {
+    width: 28px;
+  }
+}
+
+@media (max-width: 565px) {
+  .widget {
+    @include gridOneColumn();
+  }
+}
