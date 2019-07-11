@@ -28,12 +28,20 @@ body {
   font-family: 'Dosis', sans-serif;
   font-weight: 400; }
 
+.container {
+  width: 80rem;
+  height: 60rem;
+  padding: 8rem 0;
+  background-image: url(../assets/images/bg/Tokyo-bg.png);
+  background-size: cover;
+  background-position: top; }
+
 .widget {
   display: flex;
   flex-wrap: wrap;
   max-width: 58rem;
   height: 44rem;
-  margin: 6rem auto;
+  margin: 0 auto;
   border-radius: 5px;
   box-shadow: var(--shadow-dark);
   overflow: hidden; }
@@ -74,9 +82,9 @@ body {
     display: flex;
     flex-basis: 50%;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     padding: 0 4rem;
+    background-color: var(--color-primary);
     color: var(--color-secondary); }
     .widget__right-side > * {
       display: flex;
@@ -84,19 +92,41 @@ body {
       .widget__right-side > *:not(:last-child) {
         border-bottom: 1px solid var(--color-secondary); }
   .widget__main-temperature {
+    flex-basis: 14rem;
     font-size: 10rem;
     font-weight: 200; }
   .widget__graph-box {
     display: flex;
+    flex-basis: 10rem;
     justify-content: center;
     align-content: center; }
-  .widget__graph-img img {
+  .widget__graph-img {
     width: 21rem;
     height: 8rem; }
   .widget__weekly-weather {
-    display: flex; }
+    display: flex;
+    flex-basis: 20rem;
+    justify-content: space-between; }
   .widget__week-day {
-    width: 100%; }
+    display: flex;
+    flex-direction: column;
+    margin: 2.5rem 0; }
   .widget__week-icon {
-    width: 4rem;
-    height: 4rem; }
+    width: 5rem;
+    height: 5rem;
+    fill: var(--color-secondary); }
+  .widget__week-temperature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    font-size: 1.6rem;
+    font-weight: 600; }
+    .widget__week-temperature li:first-child {
+      width: 80%;
+      line-height: 2;
+      text-align: center;
+      border-bottom: 1px solid var(--color-secondary); }
+    .widget__week-temperature li:last-child {
+      color: var(--color-tertiary); }

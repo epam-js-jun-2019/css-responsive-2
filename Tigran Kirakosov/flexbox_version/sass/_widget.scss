@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   max-width: 58rem;
   height: 44rem;
-  margin: 6rem auto;
+  margin: 0 auto;
   border-radius: 5px;
   box-shadow: var(--shadow-dark);
   overflow: hidden;
@@ -57,9 +57,9 @@
     display: flex;
     flex-basis: 50%;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     padding: 0 4rem;
+    background-color: var(--color-primary);
     color: var(--color-secondary);
 
     & > * {
@@ -73,39 +73,62 @@
   }
 
   &__main-temperature {
+    flex-basis: 14rem;
     font-size: 10rem;
     font-weight: 200;
   }
 
   &__graph-box {
     display: flex;
+    flex-basis: 10rem;
     justify-content: center;
     align-content: center;
   }
 
   &__graph-img {
-    img {
-      width: 21rem;
-      height: 8rem;
-    }
+    width: 21rem;
+    height: 8rem;
   }
 
   &__weekly-weather {
     display: flex;
+    flex-basis: 20rem;
+    justify-content: space-between;
   }
 
   &__week-day {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 2.5rem 0;
   }
 
   &__icon-box {
   }
 
   &__week-icon {
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
+    fill: var(--color-secondary);
   }
 
   &__week-temperature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    li:first-child {
+      width: 80%;
+      line-height: 2;
+      text-align: center;
+      border-bottom: 1px solid var(--color-secondary);
+    }
+
+    li:last-child {
+      color: var(--color-tertiary);
+    }
   }
 }
