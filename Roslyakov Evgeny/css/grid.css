@@ -1,0 +1,138 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Dosis', 'Tahoma', sans-serif;
+    font-weight: 200;
+}
+
+.main-container {
+    box-sizing: border-box;
+    max-width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    padding-top: 80px;
+    color: rgb(255, 255, 255);
+    background-image: url(../img/background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.widjet {
+    width: 581px;
+    height: 438px;
+    border-radius: 4px;
+    box-shadow: 0 2px 21px 0 rgba(0, 0, 0, .44);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0 auto;
+}
+
+.widjet__leftside {
+    grid-column: 1 / 2;
+    display: grid;
+    height: 100%;
+    grid-template-rows: auto 94px 104px;
+    background-image: url(../img/widjetbgtr.png);
+    background-repeat: no-repeat;
+    border-right: 1px solid rgb(119, 25, 33);
+}
+
+.widjet__rightside {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 41px auto 41px;
+    grid-template-rows: 143px 98px auto;
+    color: rgb(119, 25, 33);
+    background-color: rgb(255, 255, 255);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.big-sun-icon {
+    width: 142px;
+    height: 142px;
+    margin: 42px auto 0;
+}
+
+.widjet__weather-inner {
+    text-align: center;
+    padding-top: 24px;
+    background-color: rgba(46, 28, 37, 0.89);
+}
+
+.widjet__weather {
+    font-size: 36px;
+    line-height: 1.333;
+}
+
+.widjet__info-inner {
+    text-align: center;
+    padding-top: 28px;
+    background-color: rgba(119, 25, 33, 0.89);
+    border-bottom-left-radius: 4px;
+}
+
+.widjet__info {
+    font-size: 22px;
+    line-height: 2.182;
+}
+
+.widjet__temperature-inner {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    padding-top: 12px;
+}
+
+.widjet__temperature {
+    margin: 0 -2px;
+    font-size: 101px;
+}
+
+.graph-inner {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    padding-top: 26px;
+    border-top: 1px solid rgb(119, 25, 33);
+    border-bottom: 1px solid rgb(119, 25, 33);
+}
+
+.days-inner {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: auto auto auto;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.day {
+    display: grid;
+    grid-template-rows: 65px 50px 28px auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    list-style-type: none;
+}
+
+.day__icon-inner {
+    padding-top: 25px;
+}
+
+.day__weekday-inner {
+    padding-top: 15px;
+    border-bottom: 1px solid rgb(119, 25, 33);
+}
+
+.day__temperature-inner {
+    padding-top: 10px;
+}
+
+.day__temperature_black {
+    color: rgb(0, 0, 0);
+}
