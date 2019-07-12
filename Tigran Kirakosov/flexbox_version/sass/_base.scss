@@ -39,7 +39,7 @@ html {
   }
 
   @include respond(phone) {
-    font-size: 25%; // 1 rem = 4px, 4/16 = 25%
+    font-size: 31%;
   }
 
   @include respond(big-desctop) {
