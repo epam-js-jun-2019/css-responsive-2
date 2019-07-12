@@ -1,7 +1,7 @@
 * {
   margin: 0px;
 }
-section {
+.background {
   padding-top: 95px;
   padding-bottom: 95px;
   width: 100%;
@@ -23,46 +23,47 @@ section {
   flex-wrap: wrap;
   justify-content: flex-start;
 }
-.cub1, .cub2, .cub3, .cub4, .cub5, .cub6 {
+.chicago-weather, .seattle-weather, .brooklyn-weather, .portland-weather, .week-weather, .sanjose-weather{
   width: 203px;
   height: 205px;
   text-align: center;
 }
-.cub1 {
+.chicago-weather {
   background-color: rgb(6, 179, 219);
 }
-.cub2 {
+.seattle-weather {
   background-color: rgb(78, 212, 134);
 }
-.cub3 {
+.brooklyn-weather {
   background-color: rgb(97, 57, 246);
 }
-.cub4 {
+.portland-weather {
   background-color: rgb(227, 182, 61);
 }
-.cub5 {
+.week-weather {
   background-color: rgb(220, 61, 102);
 }
-.cub6 {
+.sanjose-weather {
   background-color: rgb(189, 84, 205);
 }
-.cub1 img, .cub2 img, .cub3 img, .cub4 img, .cub6 img {
+.chicago-weather__image, .seattle-weather__image, .brooklyn-weather__image,
+ .portland-weather__image, .sanjose-weather__image {
   width: 90px;
   height: 90px;
   margin-bottom: 7px;
 }
-.cub1 img, .cub2 img, .cub3 img {
+.chicago-weather__image, .seattle-weather__image, .brooklyn-weather__image {
   margin-top: 43px;
 }
-.cub4 img, .cub6 img {
+.portland-weather__image, .sanjose-weather__image {
   margin-top: 39px;
 }
-#fifthimg {
+.week-weather__image {
   width: 73px;
   height: 74px;
   margin-top: 17px;
 }
-.cub5 > div {
+.week-weather__description {
   width: 144px;
   height: 90px;
   margin-top: 10px;
@@ -71,22 +72,23 @@ section {
   padding-right: 30px;
   padding-top: 10px;
 }
-.forflex {
+.week-weather__items{
   display: flex;
   justify-content: space-between;
 }
-.smallimg img {
+.week-weather__image-small {
   width: 20px;
   height: 20px;
 }
-p {
+.chicago-weather__text, .seattle-weather__text,  .brooklyn-weather__text, 
+.portland-weather__text, .sanjose-weather__text, .week-weather__text-small {
   color: white;
   display: inline;
   font-family: 'Lato', sans-serif;
   text-transform: uppercase;
   font-size: 16px;
 }
-.week p, .degree p {
+.week-weather__text-small {
   font-size: 11px;
 }
 @media(max-width: 767px) {
