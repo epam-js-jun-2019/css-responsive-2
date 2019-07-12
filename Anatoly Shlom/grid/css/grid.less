@@ -55,13 +55,10 @@ html {
     }
 }  
   
-
+/* Вопрос - на сколько допустимо задавать grid-area отдельно(4 строки ниже) от остальных параметров блоков, или это моветон? */
 .nav-block { grid-area: nav-block; }
-  
 .current-date { grid-area: current-date; }
-
 .weather-block { grid-area: weather-block; }
-
 .wind-block { grid-area: wind-block; }
 
 /*верхняя часть виджета*/
@@ -81,7 +78,6 @@ html {
 /*секция с температурой,локацией,ветром*/
 .weather-block {
     justify-self: left;
-
 }
 .weather-block__temperature {
     font-size: 92px;
@@ -96,7 +92,6 @@ html {
     justify-content: left;
     align-items: flex-end;
 }
-
 .wind-block__speed {
     font-size: 29px;
     font-weight: 400;
@@ -123,10 +118,10 @@ html {
         text-align: center;
     }
 }
+/* И еще вопрос - можно ли задавать @media только для конкретных условий, как блок выше. Или делать @media для всех условий*/
 
 
 /* Оформляем навбар*/
-
 .nav-block {
     background:rgba(0,0,0,0.5);
     margin: 10% 0 0 0;
@@ -141,11 +136,9 @@ html {
         flex-direction: column;
         justify-content: space-between;
         li {
-            font-size: 14px; 
-           
+            font-size: 14px;            
         }
     }
-
     .nav-block__arrow-box {
         display:flex;
         justify-content: center;
@@ -156,14 +149,12 @@ html {
         border-top: 1px solid; 
         display: flex;
         flex-direction: row;  
-        justify-content: space-around;
-     
+        justify-content: space-around;    
     }
     .nav-block__divider_disable {  
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-
     }
     .nav-block__icon {
         height: 20px;

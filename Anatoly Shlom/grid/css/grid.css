@@ -42,6 +42,7 @@ html {
     grid-template-areas: "current-date" "weather-block" "wind-block" "nav-block";
   }
 }
+/* Вопрос - на сколько допустимо задавать grid-area отдельно(4 строки ниже) от остальных параметров блоков, или это моветон? */
 .nav-block {
   grid-area: nav-block;
 }
@@ -109,6 +110,7 @@ html {
     text-align: center;
   }
 }
+/* И еще вопрос - можно ли задавать @media только для конкретных условий, как блок выше. Или делать @media для всех условий*/
 /* Оформляем навбар*/
 .nav-block {
   background: rgba(0, 0, 0, 0.5);
