@@ -21,21 +21,40 @@ html {
   }
 
 /*оформляем сам виджет*/
-.widget {
-    background: no-repeat;
-    background-image: url("../img/main_bg.png");
-    background-size: cover; 
-    padding: 10% 0 0 0;
-    margin: 7% 11% 7% 11%;
-    display: grid;
-    grid-template-columns: 1.5fr 0.5fr 1fr;
-    grid-template-areas: 
-    ". . ."
-    ". current-date weather-block" 
-    ". . wind-block" 
-    "nav-block nav-block nav-block";
-  
+@media only screen and (min-width: 600px) {
+    .widget {
+        background: no-repeat;
+        background-image: url("../img/main_bg.png");
+        background-size: cover; 
+        padding: 10% 0 0 0;
+        margin: 7% 11% 7% 11%;
+        display: grid;
+        grid-template-columns: 1.5fr 0.5fr 1fr;
+        grid-template-areas: 
+            ". . ."
+            ". current-date weather-block" 
+            ". . wind-block" 
+            "nav-block nav-block nav-block";
+    }
 }
+
+@media (max-width: 600px) {
+    .widget {
+        background: no-repeat;
+        background-image: url("../img/main_bg.png");
+        background-size: cover; 
+        padding: 10% 0 0 0;
+        margin: 7% 11% 7% 11%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "current-date"
+            "weather-block"
+            "wind-block"
+            "nav-block";
+    }
+}  
+  
 
 .nav-block { grid-area: nav-block; }
   
@@ -48,11 +67,9 @@ html {
 /*верхняя часть виджета*/
 
 /*секция с текущей датой*/    
-@media only screen and (min-width: 600px) {
-    .current-date {
-        margin: 20px 0 0 0 ;
-        justify-self: right;
-    }
+.current-date {
+    margin: 20px 0 0 0 ;
+    justify-self: right;
 }
 .current-date__week-day {
     font-size: 30px;
@@ -90,6 +107,21 @@ html {
     padding: 0 0 3px 0; 
     /*три пикселя выше нужны что бы стояли на одной линии значение и единицы измерения
     Верю в то что это баг шрифта, а не мои кривые руки)*/
+}
+@media (max-width: 600px) {
+    .current-date {
+        margin: 20px 0 0 0 ;
+        justify-self: center;
+    }
+    .weather-block {
+        justify-self: center;
+    }
+    .wind-block {
+        justify-self: center;
+    }
+    .weather-block__location {
+        text-align: center;
+    }
 }
 
 
