@@ -1,0 +1,129 @@
+@charset 'utf-8';
+
+body{
+    margin: 0;
+}
+
+%width-height-prcnt{
+    width: 100%;
+    height: 100%;
+}
+
+%flex-space-btw{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+@mixin min-height-width($height, $width){
+    min-height: $height;
+    min-width: $width;
+}
+
+.weather-widget{
+    @extend %width-height-prcnt;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Lato', sans-serif;
+    color: #FFFFFF;
+}
+
+
+.weather-widget__city-card{
+    @extend %width-height-prcnt;
+    @include min-height-width(204px, 204px);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.city-card-chicago{
+    background-color: #00C0E2;
+}
+
+.city-card-seattle{
+    background-color: #5AD998;
+}
+
+.city-card-brooklyn{
+    background-color: #7558F8;
+}
+
+.city-card-portland{
+    background-color: #E9C14D;
+}
+
+.city-card-schedule{
+    justify-content: space-between;
+    background-color: #E55679;
+}
+
+.city-card-sanjose{
+    background-color: #CB70D6;
+}
+
+.city-card-schedule__img{
+    margin-top: 25px;
+    margin-right: 10px;
+}
+
+.city-card-schedule__schedule-table{
+    @extend %width-height-prcnt;
+    @include min-height-width(99px, 204px);
+    background-color: #CB4C6C;
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.15);
+}
+
+.city-card-schedule__week-days-container{
+    @include min-height-width(67px, 160px);
+    margin-left: 9%;
+    margin-top: 19px;
+    margin-right: 9%;
+    @extend %flex-space-btw;
+}
+
+.city-card-schedule__days-list{
+    width: 155px;
+    height: 68px;
+    padding: 0;
+    margin: 0;
+    @extend %flex-space-btw;
+    list-style: none;
+}
+
+.days-list__list-text{
+    font-size: 9pt;
+}
+ 
+.days-list__list-elem{
+    @extend %flex-space-btw;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.days-list__list-img{
+    margin: 0;
+}
+
+.city-card-chicago__img, .city-card-sanjose__img, .city-card-portland__img, .city-card-brooklyn__img, .city-card-seattle__img{
+    padding-top: 2px;
+    padding-bottom: 24px;
+}
+
+.city-card-sanjose__img{
+    padding-top: 20px;
+    padding-bottom: 32px;
+}
+
+
+@media only screen and (min-width: 611px)
+{
+    .weather-widget{
+        width: 611px;
+      }
+    
+}
