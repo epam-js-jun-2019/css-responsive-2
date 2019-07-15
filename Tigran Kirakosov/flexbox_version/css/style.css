@@ -1,0 +1,152 @@
+/*  MEDIA QUERY MANAGER
+
+0 - 600px:        Phone
+600 - 900px:      Tablet portrait
+900 - 1200px:     Tablet landscape
+[1200 - 1800px] is where our normal styles applies
+1800px + :        Big desctop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desctop
+
+1em = 16px
+*/
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 1200px) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 900px) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 600px) {
+    html {
+      font-size: 31%; } }
+  @media only screen and (min-width: 1800px) {
+    html {
+      font-size: 75%; } }
+
+body {
+  min-height: 100vh;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 400; }
+
+.container {
+  width: 80rem;
+  height: 60rem;
+  padding: 8rem 0;
+  background-image: url(../assets/images/bg/Tokyo-bg.png);
+  background-size: cover;
+  background-position: top; }
+
+.widget {
+  display: flex;
+  flex-wrap: wrap;
+  width: 58rem;
+  height: 44rem;
+  margin: 7rem auto;
+  border-radius: 5px;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  overflow: hidden; }
+  .widget__left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    color: #fff;
+    background-image: url(../assets/images/bg/Tokyo-bg-inner.png);
+    background-size: cover;
+    background-position: top;
+    border-right: 1px solid #332126; }
+    .widget__left-side > * {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+  .widget__main-icon-box {
+    height: 24rem; }
+  .widget__main-icon {
+    width: 17rem;
+    height: 17rem; }
+  .widget__weather-desc {
+    width: 100%;
+    height: 9.5rem;
+    font-size: 3.6rem;
+    font-weight: 300;
+    background-color: rgba(51, 33, 38, 0.9); }
+  .widget__weather-date {
+    width: 100%;
+    height: 10.5rem;
+    font-size: 2.2rem;
+    font-weight: 200;
+    background-color: rgba(123, 31, 39, 0.9); }
+  .widget__right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 0 4rem;
+    background-color: #fff;
+    color: #7b1f27; }
+    .widget__right-side > * {
+      display: flex;
+      width: 100%; }
+      .widget__right-side > *:not(:last-child) {
+        border-bottom: 1px solid #7b1f27; }
+  .widget__main-temperature {
+    height: 14rem;
+    font-size: 10rem;
+    font-weight: 200; }
+  .widget__graph-box {
+    display: flex;
+    height: 10rem;
+    justify-content: center;
+    align-content: center; }
+  .widget__graph-img {
+    width: 21rem;
+    height: 8rem; }
+  .widget__weekly-weather {
+    display: flex;
+    height: 20rem;
+    justify-content: space-between; }
+  .widget__week-day {
+    display: flex;
+    flex-direction: column;
+    margin: 2.5rem 0; }
+  .widget__week-icon {
+    width: 5rem;
+    height: 5rem; }
+  .widget__week-temperature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    font-size: 1.6rem;
+    font-weight: 600; }
+    .widget__week-temperature li:first-child {
+      width: 90%;
+      line-height: 2;
+      text-align: center;
+      border-bottom: 1px solid #7b1f27; }
+    .widget__week-temperature li:last-child {
+      color: #332126; }

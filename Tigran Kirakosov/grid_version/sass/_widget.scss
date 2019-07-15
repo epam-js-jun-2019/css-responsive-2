@@ -1,0 +1,141 @@
+.widget {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-template-rows: 100%;
+  -ms-grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100%;
+  grid-template-columns: 1fr 1fr;
+  width: 58rem;
+  height: 44rem;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: $shadow-dark;
+  overflow: hidden;
+
+  &__left-side {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-template-rows: 24rem 9.5rem 10.5rem;
+    -ms-grid-template-columns: 1fr;
+    grid-template-rows: 24rem 9.5rem 10.5rem;
+    grid-template-columns: 1fr;
+    color: $color-primary;
+    background-image: url(../assets/images/bg/Tokyo-bg-inner.png);
+    background-size: cover;
+    background-position: top right;
+    border-right: 1px solid $color-tertiary;
+
+    & > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__main-icon {
+    width: 17rem;
+    height: 17rem;
+  }
+
+  &__weather-desc {
+    width: 100%;
+    font-size: 3.6rem;
+    font-weight: 300;
+    background-color: rgba(51, 33, 38, 0.9);
+  }
+
+  &__weather-date {
+    width: 100%;
+    font-size: 2.2rem;
+    font-weight: 200;
+    background-color: rgba(123, 31, 39, 0.9);
+  }
+
+  &__right-side {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-template-rows: 14rem 10rem 20rem;
+    -ms-grid-template-columns: 1fr;
+    grid-template-rows: 14rem 10rem 20rem;
+    grid-template-columns: 1fr;
+    padding: 0 4rem;
+
+    background-color: $color-primary;
+    color: $color-secondary;
+
+    & > * {
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-secondary;
+      }
+    }
+  }
+
+  &__main-temperature {
+    font-size: 10rem;
+    font-weight: 200;
+  }
+
+  &__graph-img {
+    width: 21rem;
+    height: 8rem;
+  }
+
+  &__weekly-weather {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-template-rows: 1fr;
+    -ms-grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
+  }
+
+  &__week-day {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-template-rows: 1fr 2fr;
+    -ms-grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+
+  &__icon-box {
+    padding-top: 1.5rem;
+  }
+
+  &__week-icon {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__week-temperature {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-template-rows: 5rem 3rem 3rem;
+    -ms-grid-template-columns: 1fr;
+    grid-template-rows: 5rem 3rem 3rem;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    li:first-child {
+      width: 150%;
+      line-height: 2.5;
+      text-align: center;
+      border-bottom: 1px solid $color-secondary;
+    }
+
+    li:nth-child(2) {
+      margin-top: 1rem;
+    }
+
+    li:last-child {
+      color: $color-tertiary;
+    }
+  }
+}
