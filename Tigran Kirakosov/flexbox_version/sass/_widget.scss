@@ -5,20 +5,20 @@
   height: 44rem;
   margin: 7rem auto;
   border-radius: 5px;
-  box-shadow: var(--shadow-dark);
+  box-shadow: $shadow-dark;
   overflow: hidden;
 
   &__left-side {
     display: flex;
-    flex-basis: 50%;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    color: var(--color-primary);
+    width: 50%;
+    color: $color-primary;
     background-image: url(../assets/images/bg/Tokyo-bg-inner.png);
     background-size: cover;
     background-position: top;
-    border-right: 1px solid var(--color-tertiary);
+    border-right: 1px solid $color-tertiary;
 
     & > * {
       display: flex;
@@ -28,18 +28,17 @@
   }
 
   &__main-icon-box {
-    flex-basis: 24rem;
+    height: 24rem;
   }
 
   &__main-icon {
     width: 17rem;
     height: 17rem;
-    fill: var(--color-primary);
   }
 
   &__weather-desc {
     width: 100%;
-    flex-basis: 9.5rem;
+    height: 9.5rem;
     font-size: 3.6rem;
     font-weight: 300;
     background-color: rgba(51, 33, 38, 0.9);
@@ -47,7 +46,7 @@
 
   &__weather-date {
     width: 100%;
-    flex-basis: 10.5rem;
+    height: 10.5rem;
     font-size: 2.2rem;
     font-weight: 200;
     background-color: rgba(123, 31, 39, 0.9);
@@ -55,32 +54,32 @@
 
   &__right-side {
     display: flex;
-    flex-basis: 50%;
     flex-direction: column;
     align-items: center;
+    width: 50%;
     padding: 0 4rem;
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
+    background-color: $color-primary;
+    color: $color-secondary;
 
     & > * {
       display: flex;
       width: 100%;
 
       &:not(:last-child) {
-        border-bottom: 1px solid var(--color-secondary);
+        border-bottom: 1px solid $color-secondary;
       }
     }
   }
 
   &__main-temperature {
-    flex-basis: 14rem;
+    height: 14rem;
     font-size: 10rem;
     font-weight: 200;
   }
 
   &__graph-box {
     display: flex;
-    flex-basis: 10rem;
+    height: 10rem;
     justify-content: center;
     align-content: center;
   }
@@ -92,7 +91,7 @@
 
   &__weekly-weather {
     display: flex;
-    flex-basis: 20rem;
+    height: 20rem;
     justify-content: space-between;
   }
 
@@ -105,7 +104,6 @@
   &__week-icon {
     width: 5rem;
     height: 5rem;
-    fill: var(--color-secondary);
   }
 
   &__week-temperature {
@@ -121,11 +119,11 @@
       width: 90%;
       line-height: 2;
       text-align: center;
-      border-bottom: 1px solid var(--color-secondary);
+      border-bottom: 1px solid $color-secondary;
     }
 
     li:last-child {
-      color: var(--color-tertiary);
+      color: $color-tertiary;
     }
   }
 }
