@@ -12,6 +12,7 @@
     display: flex;
     justify-content: $justify-content;
     align-items: $align-items;
+    flex-direction: $flex-direction;
 }
 
 @mixin icon ($width: 0, $heigth: 0, $bgX: 0, $bgY: 0) {
