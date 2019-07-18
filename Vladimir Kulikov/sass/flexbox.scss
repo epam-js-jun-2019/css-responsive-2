@@ -1,0 +1,225 @@
+@import 'mixins';
+@import 'variables';
+@import 'placeholders';
+
+@include font('ProximaNova-Regular');
+@include font('ProximaNova-Light');
+@include font('SourceSansPro-Light');
+@include font('SourceSansPro-SemiBold');
+@include font('OpenSans-Regular');
+
+html {
+    font-size: #{$root-font-size}px;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    @include flex(center, center);
+    height: 100vh;
+    background: $body-bg-color;
+}
+
+.weather-widget {
+    width: 389px;
+    border-radius: $radius;
+    box-shadow: 0 21px 19px $shadow-color;
+
+    &__top {
+        background: $top-bg-color;
+        border-radius: $radius $radius 0 0;
+    }
+
+    &__bottom {
+        color: #fff;
+        background: $bottom-bg-color;
+        border-radius: 0 0 $radius $radius;
+    }
+
+    &__image {
+        position: relative;
+        padding: 17.5% 0 13.5% 0;
+        @include flex(center, center);
+    
+        &-refresh {
+            position: absolute;
+            top: 7%;
+            right: 5%;
+            cursor: pointer;
+            background: none;
+            padding: 0;
+            outline: none;
+            border: none;
+        }
+    }
+
+    &__top-info {
+        @include flex(space-between, center);
+        padding-bottom: 5%;
+        font-family: 'ProximaNova-Light', 'Arial', sans-serif;
+        color: #8d9396;
+    }
+
+    &__degrees {
+        @include flex;
+        width: 25%;
+        padding-left: 20px;
+        @include rem(57.6);
+
+        &-symbol {
+            display: block;
+            padding-top: 7%;
+            padding-left: 7%;
+            @include rem(22);
+        }
+    }
+
+    &__text {
+        @include flex;
+        flex-direction: column;
+        width: 53.5%;
+    }
+
+    &__sky {
+        font-family: 'SourceSansPro-Light', 'Arial', sans-serif;
+        @include rem(24);
+    }
+
+    &__location {
+        font-family: 'SourceSansPro-SemiBold', 'Arial', sans-serif;
+        @include rem(16);
+    }
+
+    &__date {
+        @include flex(center, center);
+        flex-direction: column;
+        width: 16.5%;
+        padding: 13px 0;
+        font-family: 'OpenSans-Regular', 'Arial', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        background: $date-bg-color;
+
+        &-day {
+            @include rem(18);
+        }
+    }
+    
+    &__bottom-info {
+        @include flex(space-between);
+        padding: 10% 10%;
+    }
+
+    &__wind {
+        @extend %bottom-icon;
+        &::before {
+            @include icon(28px, 18px, 88px);
+        }
+    }
+
+    &__humidity {
+        @extend %bottom-icon;
+        &::before {
+            @include icon(16px, 20px, 49px);
+        }
+    }
+
+    &__clear {
+        @extend %bottom-icon;
+        &::before {
+            @include icon(22px, 22px, 23px);
+        }
+    }
+
+    &__pagination {
+        @include flex(center, center);
+        padding-bottom: 5%;
+        padding-top: 1%;
+    }
+
+    &__dot {
+        width: 6px;
+        height: 6px;
+        border: 2px solid $pagination-color;
+        margin: 0 1%;
+        border-radius: 50%;
+    }
+
+    &__dot_active {
+        @extend .weather-widget__dot;
+        background: $pagination-color-active;
+        border-color: #eee;
+        border-width: 1px;
+    }
+}
+
+@media screen and (max-width:370px) {
+    .weather-widget {
+        &__bottom-info{
+            @include flex(center, center, column);
+        }
+
+        &__top-info {
+            @include flex(flex-start, center);
+        }
+
+        &__wind, &__humidity, &__clear {
+            margin-bottom: 3%;
+            width: 100%;
+
+            &::before {
+                margin-right: 5%;
+            }
+        }
+
+        &__date {
+            order: -1;
+        }
+
+        &__image {
+            padding: 6% 0 0 0;
+        }
+
+        &__image-icon {
+            display: none;
+        }
+
+        &__image-refresh {
+            top: 200%;
+        }
+
+        &__degrees {
+            width: 20%;
+            padding-left: 15px;
+            @include rem(45);
+        }
+
+        &__degrees-symbol {
+            padding-left: 2%;
+            @include rem(17);
+        }
+
+    }
+}
+
+@media screen and (max-width:350px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    html {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width:290px) {
+    html {
+        font-size: 10px;
+    }
+}
