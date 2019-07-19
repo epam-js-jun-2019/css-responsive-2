@@ -1,0 +1,190 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+@media screen and (min-width: 615px) {
+    .main-container { 
+        width: 615px;
+        height: 410px;
+        
+        }
+        
+        
+    }
+
+    @media screen and (max-width: 615px) {
+        .main-container { 
+            height: 615px;
+            
+            }
+            
+            
+        }
+
+
+   
+.background{
+    background-image:url(img/back_main.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    background-attachment: fixed 
+
+
+}
+
+.main-container__week{
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 20px 15px 0 15px;
+
+}
+
+.main-container__day{
+    color: white;
+    font-weight: bold;
+    font-family:Helvetica, monospace;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    font-size: 12px;
+    text-align: center;
+
+
+
+
+}
+
+.main-container__name {
+    padding-bottom: 10px;
+}
+
+.main-container__image-div {
+    height: 25px;
+}
+
+.main-container__image-sun-div {
+    height: 25px;
+    position: relative;
+}
+
+.main-container__image-sun-div img {
+    position: absolute;
+    top: -3px;
+    left: 0;
+}
+
+.main-container__value {
+    padding-top: 3px;
+}
+
+.main-container{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding:0;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+
+.main-container__chicago{
+background-image:url(img/chicago_back.png);
+background-repeat: no-repeat;
+width: 205px;
+height: 205px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction:column;
+
+}
+.main-container__seattle{
+
+background-image:url(img/seattle_back.png);
+background-repeat: no-repeat;
+background-size: contain;
+width: 205px;
+height: 205px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction:column;
+}
+.main-container__brooklyn{
+
+background-image:url(img/brooklyn_back.png);
+background-repeat: no-repeat;
+background-size: contain;
+width: 205px;
+height: 205px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction:column;
+}
+.main-container__portland{
+
+background-image:url(img/portland_back.png);
+background-repeat: no-repeat;
+width: 205px;
+height: 205px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction:column;
+
+}
+.main-container__week-top{
+background-image:url(img/week_back1.png);
+background-repeat: no-repeat;
+background-size: contain;
+width: 205px;
+height: 205px;
+height: 205px;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+flex-direction:column;
+}
+
+.main-container__week-bottom{
+background-image:url(img/week_back2.png);
+background-repeat: no-repeat;
+background-size: contain;
+width: 205px;
+height: 99px;
+
+}
+
+.main-container__san-jose{
+background-image:url(img/san_jose_back.png);
+background-repeat: no-repeat;
+background-size: contain;
+width: 205px;
+height: 205px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction:column;
+}
+
+.main-container__element{
+padding: 10px; 
+color: white;
+font-weight: bold;
+font-family:Helvetica, monospace;
+}
+
+.day_elem{
+    padding: 3px;   
+}
