@@ -133,8 +133,8 @@ html {
     justify-content: center;
   }
   .nav-block__divider_active {
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
+    padding-top: 3px;
+    padding-bottom: 3px;
     border-top: 1px solid;
     display: flex;
     flex-direction: row;
@@ -198,7 +198,7 @@ html {
     height: 25px;
   }
   .nav-block__divider_active {
-    padding-left: 0.3em;
+    padding-left: 3px;
     border-left: 1px solid;
   }
 }
