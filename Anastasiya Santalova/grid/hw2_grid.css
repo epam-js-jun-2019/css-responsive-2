@@ -42,30 +42,24 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-
-.weather-skyblue {
-  grid-area: wskyblue;
-  background-color: #06b3db; }
-
-.weather-green {
-  grid-area: wgreen;
-  background-color: #4ed486; }
-
-.weather-blue {
-  grid-area: wblue;
-  background-color: #6139f6; }
-
-.weather-orange {
-  grid-area: worange;
-  background-color: #e3b63d; }
-
-.weather-pink {
-  grid-area: wpink;
-  background-color: #dc3d66; }
-
-.weather-purple {
-  grid-area: wpurple;
-  background-color: #db51e2; }
+  .weather-skyblue {
+    grid-area: wskyblue;
+    background-color: #06b3db; }
+  .weather-green {
+    grid-area: wgreen;
+    background-color: #4ed486; }
+  .weather-blue {
+    grid-area: wblue;
+    background-color: #6139f6; }
+  .weather-orange {
+    grid-area: worange;
+    background-color: #e3b63d; }
+  .weather-pink {
+    grid-area: wpink;
+    background-color: #dc3d66; }
+  .weather-purple {
+    grid-area: wpurple;
+    background-color: #db51e2; }
 
 .weather__block_visible {
   display: -webkit-box;

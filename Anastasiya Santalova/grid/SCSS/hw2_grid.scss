@@ -1,17 +1,17 @@
-@import "variables";
-@import "mixin";
+@import "_variables";
+@import "_mixins";
 
 
 // CSS Styles
 
 html {
-  @include fullScreen;
+  @include fullContainer;
 }
 
 body {
   box-sizing: border-box;
 
-  @include fullScreen;
+  @include fullContainer;
 
   min-width: 320px;
   min-height: 320px;
@@ -29,54 +29,55 @@ body {
 }
 
 .widget {
-  @include fullScreen;
+  @include fullContainer;
   
   @include gridThreeColumns();
 }
 
 .weather {
-  @include fullScreen;
+  @include fullContainer;
 
   display: flex;
   align-content: center;
   align-items: center;
-}
-
-.weather-skyblue {
-  grid-area: wskyblue;
-
-  background-color: $skyBlue;
-}
-
-.weather-green {
-  grid-area: wgreen;
-
-  background-color: $green;
-}
-
-.weather-blue {
-  grid-area: wblue;
-
-  background-color: $blue;
-}
-
-.weather-orange {
-  grid-area: worange;
-
-  background-color: $orange;
-}
-
-.weather-pink {
-  grid-area: wpink;
   
-  background-color: $pink;
+  &-skyblue {
+    grid-area: wskyblue;
+  
+    background-color: $skyBlue;
+  }
+
+  &-green {
+    grid-area: wgreen;
+  
+    background-color: $green;
+  }
+
+  &-blue {
+    grid-area: wblue;
+  
+    background-color: $blue;
+  }
+  
+  &-orange {
+    grid-area: worange;
+  
+    background-color: $orange;
+  }
+
+  &-pink {
+    grid-area: wpink;
+    
+    background-color: $pink;
+  }
+
+  &-purple {
+    grid-area: wpurple;
+  
+    background-color: $purple;
+  }
 }
 
-.weather-purple {
-  grid-area: wpurple;
-
-  background-color: $purple;
-}
 
 // Visible elements before hover
 
@@ -88,7 +89,7 @@ body {
 
   box-sizing: border-box;
 
-  @include fullScreen;
+  @include fullContainer;
   padding-top: 20%;
   padding-bottom: 15%;
 
@@ -113,7 +114,7 @@ body {
     position: absolute;
     box-sizing: border-box;
   
-    @include fullScreen;
+    @include fullContainer;
   
     background: radial-gradient(at center,  #7c7c7c, #000000);
     opacity: 0.25;
@@ -129,7 +130,7 @@ body {
   
     padding: 0 30px;
   
-    @include fullScreen;
+    @include fullContainer;
 
     .weather__day-info,
     .weather__day-info_invisible {
