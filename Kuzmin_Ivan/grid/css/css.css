@@ -8,21 +8,47 @@ body {
 }
 
 .main-box {
+    padding-top: 100px;
+    margin: 0 auto;
+    width: 600px;
+    height: 410px;
     background-size: contain;
     display: grid;
     display: -ms-grid;
-    width: 615px;
-    height: 410px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    -ms-grid-columns: 33% 33% 33%;
-    -ms-grid-rows: auto auto;
-    -ms-grid-columns: 33% 33% 33%;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: repeat(2, 1fr);
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: 1fr 1fr 1fr;
+}
+
+.main-box__cities-cube_chicago {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+
+.main-box__cities-cube_seattle {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+}
+
+.main-box__cities-cube_brooklyn {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+
+.main-box__cities-cube_portland {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+}
+
+.main-box__cities-cube_days {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+}
+
+.main-box__cities-cube_sanJose {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
 }
 
 .main-box .main-box__cities-cube {
@@ -33,81 +59,150 @@ body {
 }
 
 .cities-cube {
-    padding: 40px 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cities-cube-halfMoon,
+.cities-cube__days {
     text-align: center;
 }
 
-.days .cities-cube_halfMoon,
-.days .cities-cube__days {
-    text-align: center;
-}
-
-.days .cities-cube_halfMoon img {
+.cities-cube-halfMoon_img {
     width: 60px;
     padding-top: 20px;
 }
 
-.cities-cube img {
+.cities-cube_img {
+    margin-bottom: 15px;
+    margin-top: 40px;
     width: 90px;
     height: 80px;
 }
 
-.cities-cube_halfMoon,
+.cities-cube-halfMoon,
 .cities-cube__days {
     height: 50%;
 }
 
-.cities-cube__days div img {
+.cities-cube__days div p {
+    margin-bottom: 5px;
+}
+
+.cities-cube__days {
+    margin-bottom: 10px;
+    height: 50%;
+}
+
+.cities-cube__days_img {
     margin-bottom: -10px;
     width: 25px;
     height: 20px;
 }
 
-.chicago {
+.main-box__cities-cube_chicago {
     background-color: #00c2e3;
 }
 
-.seattle {
+.main-box__cities-cube_seattle {
     background-color: #59da99;
 }
 
-.brooklyn {
+.main-box__cities-cube_brooklyn {
     background-color: #7557f8;
 }
 
-.portland {
+.main-box__cities-cube_portland {
     background-color: #eac24c;
 }
 
-.days {
+.main-box__cities-cube_days {
     background-color: #e65579;
 }
 
-.sanJose {
+.main-box__cities-cube_sanJose {
     background-color: #cc70d8;
 }
 
 .cities-cube__days {
+    font-size: 13px;
     background-color: #cc4a6c;
     background-size: cover;
-    display: -ms-grid;
-    display: grid;
-    font-size: 13px;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    -ms-grid-columns: 20% 20% 20% 20%;
-    grid-template-columns: 20% 20% 20% 20%;
-    -ms-grid-rows: auto auto;
-    grid-template-rows: auto auto;
+    display: flex;
+    justify-content: space-between;
 }
 
-@media all and (max-width: 800px) and (min-width: 320px) {
+@media all and (max-width: 768px) {
     .main-box {
-        -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-        -ms-grid-rows: auto auto auto auto auto auto;
-        grid-template-rows: auto auto auto auto auto auto;
+    width: 400px;
+    height: 615px;
+    display: grid;
+    display: -ms-grid;
+    grid-template-rows: repeat(3, 1fr);
+    -ms-grid-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: 1fr 1fr;
     }
+    .main-box__cities-cube_chicago{
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+    .main-box__cities-cube_seattle{
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+    }
+    .main-box__cities-cube_brooklyn{
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+    }
+    .main-box__cities-cube_portland{
+        -ms-grid-row: 2;
+        -ms-grid-column: 2;
+    }
+    .main-box__cities-cube_days{
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+    .main-box__cities-cube_sanJose{
+        -ms-grid-row: 3;
+        -ms-grid-column: 2;
+    }
+}
+
+@media all and (max-width: 570px){
+    .main-box {
+    width: 200px;
+    height: 1200px;
+    display: grid;
+    display: -ms-grid;
+    grid-template-rows: repeat(6, 1fr);
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(1, 1fr);
+    -ms-grid-columns: 1fr;
+    }
+    .main-box__cities-cube_chicago{
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+    .main-box__cities-cube_seattle{
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+    }
+    .main-box__cities-cube_brooklyn{
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+    .main-box__cities-cube_portland{
+        -ms-grid-row: 4;
+        -ms-grid-column: 1;
+    }
+    .main-box__cities-cube_days{
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+    }
+    .main-box__cities-cube_sanJose{
+        -ms-grid-row: 6;
+        -ms-grid-column: 1;
+    }
+}
