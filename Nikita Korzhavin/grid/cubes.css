@@ -68,7 +68,7 @@ img {
 
 /*           about cards               */
 
-.card {
+.widget__card {
   font-size: 14px;
   min-height: 91px;
 
@@ -84,22 +84,22 @@ img {
   justify-content: space-around;
 }
 
-.card_flex {
+.widget__card_flex {
   padding: 0 10px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.card__text {
+.widget__text {
   color: #fff;
   font-family: 'AvenirNext-Bold', sans-serif;
 }
 
-.card__text_size_m {
+.widget__text_size_m {
   font-size: 1rem;
 }
 
-.card__img {
+.widget__img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,39 +113,40 @@ img {
   justify-content: flex-end;
 }
 
-.card_bg-color_blue {
+.widget__card_blue {
   background-color: #06b3db;
 }
 
-.card_bg-color_green {
+.widget__card_green {
   background: #4ed486;
 }
 
-.card_bg-color_dark-blue {
+.widget__card_dark-blue {
   background: #6139f6;
 }
 
-.card_bg-color_yellow {
+.widget__card_yellow {
   background: #e3b63d;
 }
 
-.card_bg-color_purple {
+.widget__card_purple {
   background: #bd54cd;
 }
 
-.card_bg-color_red {
+.widget__card_red {
   background: #bd3559;
 }
 
-.card__top {
+.widget__top-card {
   display: none;
 }
 
-.card__bottom {
+
+.widget__bottom-card {
   min-width: 100%;
 }
 
-.card__info-wrapper {
+.widget__info-wrapper {
   width: 100%;
 
   display: -webkit-box;
@@ -165,7 +166,7 @@ img {
   -ms-flex-pack: center;
   justify-content: space-between;
 }
-.card__info-day {
+.widget__info-day {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -191,20 +192,20 @@ img {
   align-items: center;
 }
 
-.card__text_size_s {
+.widget__text_size_s {
   font-size: 0.814rem;
 }
 
-.card__img_size_s {
+.widget__img_size_s {
   height: 30px;
   min-width: 25px;
 }
 
-.card__img_opaque {
+.widget__img_opaque {
   opacity: 0.45;
 }
 
-.card__text_flex {
+.widget__text_flex {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -216,34 +217,34 @@ img {
   margin-left: -15px;
 }
 
-.card__text_margin_l {
+.widget__text_margin_l {
   margin-left: 0px;
-  font-size: 0.914rem;
+  font-size: 0.614rem;
 }
 
 /* -------------------------grids----------------------*/
 
-.card_grid_1 {
+.widget__card_grid_1 {
   grid-area: grid1;
 }
 
-.card_grid_2 {
+.widget__card_grid_2 {
   grid-area: grid2;
 }
 
-.card_grid_3 {
+.widget__card_grid_3 {
   grid-area: grid3;
 }
 
-.card_grid_4 {
+.widget__card_grid_4 {
   grid-area: grid4;
 }
 
-.card_grid_5 {
+.widget__card_grid_5 {
   grid-area: grid5;
 }
 
-.card_grid_6 {
+.widget__card_grid_6 {
   grid-area: grid6;
 }
 
@@ -268,11 +269,11 @@ img {
     max-width: 400px;
   }
 
-  .card__text_size_s {
+  .widget__text_size_s {
     font-size: 0.814rem;
   }
 
-  .card__text_margin_l {
+  .widget__text_margin_l {
     margin-left: 0px;
     font-size: 1.014rem;
   }
@@ -283,7 +284,7 @@ img {
     max-width: 500px;
   }
 
-  .card__text_size_s {
+  .widget__text_size_s {
     font-size: 0.94rem;
   } 
 }
@@ -307,16 +308,14 @@ img {
   }
   
   .widget__card {
-    -webkit-box-flex: 1 1 203px;
-    -ms-flex: 1 1 203px;
-    flex: 1 1 203px;
-  }
-
-  .card {
     max-height: 203px;
     width: 203px;
     height: 203px;
     font-size: 14px;
+
+    -webkit-box-flex: 1 1 203px;
+    -ms-flex: 1 1 203px;
+    flex: 1 1 203px;
 
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -328,7 +327,7 @@ img {
     justify-content: center;
   }
 
-  .card_flex {
+  .widget__card_flex {
     -webkit-box-ordinal-group: 1;
     -ms-flex-order: 0;
     order: 0;
@@ -340,59 +339,60 @@ img {
     box-sizing: content-box;
   }
 
-  .card__text_position_1 {
+  .widget__text_position_1 {
     margin-top: 26px;
   }
 
-  .card__text_size_m {
+  .widget__text_size_m {
     font-size: 1rem;
   }
 
-  .card__img_size_l {
+  .widget__img_size_l {
     width: 95px;
     height: 90px;
   }
 
-  .card_bg-color_blue {
+  
+  .widget__card_blue {
     background-color: #06b3db;
     border-top: #1f5c54 1px solid;
     border-right: #1fbbdf 1px solid;
     border-bottom: #0ba4c7 1px solid;
   }
 
-  .card_bg-color_green {
+  .widget__card_green {
     border-top: #416e4a 1px solid;
     border-right: #3f5c8c 1px solid;
     border-bottom: #4ac17c 1px solid;
     border-left: #36a06e 1px solid;
   }
 
-  .card_bg-color_dark-blue {
+  .widget__card_dark-blue {
     border-top: #7d5cf8 1px solid;
     border-bottom: #633bf6 1px solid;
     border-left: #7d5cf8 1px solid;
   }
 
-  .card_bg-color_yellow {
+  .widget__card_yellow {
     border-top: #ecce7c 1px solid;
     border-right: #e6be52 1px solid;
     border-bottom: #534916 1px solid;
   }
 
-  .card_bg-color_purple {
+  .widget__card_purple {
     border-top: #c66ed4 1px solid;
     border-bottom: #4a2d47 1px solid;
     border-left: #c467d2 1px solid;
   }
 
-  .card_bg-color_red {
+  .widget__card_red {
     border-top: #e77c98 1px solid;
     border-right: #9a3878 1px solid;
     border-bottom: #5c2928 1px solid;
     border-left: #a7324e 1px solid;
   }
 
-  .card__top {
+  .widget__top-card {
     background: #dc3d66;
     height: 105px;
     min-width: 203px;
@@ -419,12 +419,12 @@ img {
     justify-content: center;
   }
 
-  .card__img_size_m {
+  .widget__img_size_m {
     width: 67px;
     height: 65px;
   }
 
-  .card__bottom {
+  .widget__bottom-card {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 203px;
     flex: 1 1 203px;
@@ -448,7 +448,7 @@ img {
     justify-content: center;
   }
 
-  .card__info-wrapper {
+  .widget__info-wrapper {
     width: 150px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -468,7 +468,7 @@ img {
     justify-content: center;
   }
 
-  .card__info-day {
+  .widget__info-day {
     height: 100%;
     max-width: 40px;
 
@@ -494,23 +494,23 @@ img {
     align-items: center;
   }
 
-  .card__text_size_s {
+  .widget__text_size_s {
     font-size: 0.714rem;
   }
 
-  .card__img_size_s {
+  .widget__img_size_s {
     width: 25px;
     height: 25px;
   }
 
-  .card__img_opaque {
+  .widget__img_opaque {
     -webkit-box-flex: 0;
     -ms-flex: none;
     flex: none;
     opacity: 1;
   }
 
-  .card__text_flex {
+  .widget__text_flex {
     -webkit-box-flex: 0;
     -ms-flex: none;
     flex: none;
@@ -522,7 +522,7 @@ img {
     margin-left: 0px;
   }
 
-  .card__text_margin_l {
+  .widget__text_margin_l {
     margin-left: 0px;
     font-size: 0.714rem;
   }
