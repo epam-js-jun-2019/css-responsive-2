@@ -1,0 +1,131 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background-image:url(img/back_main.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+@media screen and (min-width: 615px) {
+    .main-container { 
+        width: 615px;
+        height: 410px;
+        }
+    }
+
+.main-container__week{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 15px 0 15px;
+    }
+
+.main-container__day{
+    color: white;
+    font-weight: bold;
+    font-family:Helvetica, monospace;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    font-size: 12px;
+    text-align: center;
+    }
+
+.main-container__name {
+    padding-bottom: 10px;
+    }
+
+.main-container__image-div {
+    height: 25px;
+    }
+
+.main-container__image-sun-div {
+    height: 25px;
+    position: relative;
+    }
+
+.main-container__image-sun-div img {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    }
+
+.main-container__value {
+    padding-top: 3px;
+    }
+
+.main-container{
+    margin: auto;
+    padding:0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    }
+
+ .main-container__city{
+    width: 205px;
+    height: 205px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    margin: 0;
+    padding: 0;
+    }   
+
+.main-container__chicago{
+    background-color:#01b4dc;
+    }
+
+.main-container__seattle{
+    background-color:#4dd587;
+    }
+
+.main-container__brooklyn{
+    background-color:#6136f6;
+    }
+
+.main-container__portland{
+    background-color:#e4b73b;
+    }
+
+.main-container__week-top{
+    background-color:#dd3b66;
+    width: 205px;
+    height: 106px;
+    display: flex;
+    align-items: center;
+   }
+
+.main-container__week-bottom{
+    background-color:#b63054;
+    width: 205px;
+    height: 99px;
+    }
+
+.main-container__san-jose{
+    background-color:#be53ce;
+    }
+
+.main-container__element{
+    padding: 10px; 
+    color: white;
+    font-weight: bold;
+    font-family:Helvetica, monospace;
+    }
+
+.main-container__moon{
+    display: flex;
+    justify-content: center;
+    padding-top: 13px;
+    }
+
+.day_elem{
+    padding: 3px;   
+    }
