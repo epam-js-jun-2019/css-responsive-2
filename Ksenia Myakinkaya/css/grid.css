@@ -2,6 +2,9 @@ body{
     background-image: url(../images/main_bg.jpg);
     background-size: cover;
     margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+    color: #ffffff;
+    font-size: 17px;
     display: grid;
     grid-template-columns: 25vw 50vw 25vw;
 }
@@ -27,9 +30,6 @@ body{
     text-align: center;
     background-size: contain;
     border: 0.5px #bdbdbd solid;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
-    color: #ffffff;
-    font-size: 1.5vw;
     box-sizing: border-box;
     display: grid;
     grid-template-areas: "img"
@@ -58,7 +58,7 @@ p{
 }
 
 .substrate__day{
-    font-size: 1vw; 
+    font-size: 12px; 
     display: grid;
     grid-template-areas: "name"
                          "img"
@@ -108,39 +108,7 @@ p{
     }
 
     .substrate__square{
-        font-size: 2vw;
-    }
-}
-
-@media screen and (max-width:600px){
-    body{
-        grid-template-columns: 10vw 80vw 10vw;
-    }
-
-    .substrate{
-        width: 80vw;
-        grid-template-rows: repeat(2,25vw);
-        grid-template-columns: repeat(3,25vw);
-    }
-}
-
-@media screen and (max-device-width:900px){
-    body{
-        grid-template-columns: 20vw 60vw 20vw;
-    }
-
-    .substrate{
-        width: 60vw;
-        grid-template-rows: repeat(2,20vw);
-        grid-template-columns: repeat(3,20vw);
-    }
-
-    .substrate__square{
-        font-size: 2vw;
-    }
-
-    .substrate__day{
-        font-size: 1.5vw;
+        font-size: 20px;
     }
 }
 
@@ -156,26 +124,34 @@ p{
     }
 
     .substrate__square{
-        font-size: 3.5vw;
-    }
-
-    .substrate__day{
-        font-size: 2.5vw;
+        font-size: 12px;
     }
 }
 
-@media screen and (max-device-width:350px){
+@media screen and (max-width:600px){
+    body{
+        grid-template-columns: 10vw 80vw 10vw;
+    }
+
+    .substrate{
+        width: 80vw;
+        grid-template-rows: repeat(2,25vw);
+        grid-template-columns: repeat(3,25vw);
+    }
+
+    .substrate__day{
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width:360px){
     .substrate{
         grid-template-rows: repeat(6,70vw);
         grid-template-columns: repeat(1,70vw);
     }
 
     .substrate__square{
-        font-size: 6.5vw;
-    }
-
-    .substrate__day{
-        font-size: 5.5vw;
+        font-size: 20px;
     }
 
     .substrate__four-days{
