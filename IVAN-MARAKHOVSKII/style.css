@@ -1,0 +1,122 @@
+body {
+  background-color: #515c65;
+  background-image: linear-gradient(to right, #33383c, #77828a, #33383c);
+}
+.grid {
+  height: 95vh;
+
+  display: grid;
+  grid-template: 24.2% 1fr 24.1% / 40.15% 1fr 39.6%;
+}
+.wheatherWidget {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  
+  display: flex;
+  flex-direction: column;
+
+  background-color: #f1f8f9;
+  border-radius: 10px;
+}
+.refreshIcon {
+  width: 100%;
+  height: 20px;
+
+  margin-top: 16px;
+  margin-left: 351px;
+}
+.wheatherImage {
+  display: flex;
+  align-items: center;
+
+  margin: 32px 0px 53px 126px;
+}
+.infoBlock {
+  display: flex;
+}
+.tempIcon {
+  padding: 12px 0px 25px 23px;
+}
+.infoText {
+  padding: 11px 0px 14px 14px;
+
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 1px;
+  color: #a2a9ad;
+}
+.infoTextTop {
+  font-size: 22px;
+  font-weight: 200;
+}
+.infoTextBottom {
+  font-weight: 900;
+  font-size: 14px;
+}
+.dayInfo {
+  height: 67px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: white;
+  
+  margin-left: auto;
+  padding : 2px 13px 0px 19px;
+  
+  background-color: #54bae6;
+}
+.topDayText {
+  margin-top: 3px;
+  margin-bottom: 5px;
+
+  font-size: 14px;
+}
+.bottomDayText {
+  font-size: 18px;
+}
+.stats {
+  height: 100%;
+    
+  margin-top: 11px;
+  padding: 0px 45px 0px 45px;
+  
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+  font-family: "Kanit", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  
+  background-color: #2e3335;
+}
+.stats img {
+  margin-right: 16px;
+}
+.firstPage {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 44px;
+
+}
+.wind,
+.sun,
+.humidity {
+  display: flex;
+  align-items: center;
+
+  margin-right : 10px;
+}
+.pagination {
+  margin-left: 123px;
+  margin-top: 40px;
+}
+.pagination img {
+  margin-right: 3px;
+}
