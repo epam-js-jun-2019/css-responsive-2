@@ -1,0 +1,155 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; }
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 56.25%; } }
+@media only screen and (max-width: 900px) {
+    html {
+        font-size: 50%; } }
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 31%; } }
+@media only screen and (min-width: 1800px) {
+    html {
+        font-size: 75%; } }
+
+body {
+    background-color: black;
+}
+
+li {
+    text-align: center;
+    width: 20%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 800px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/Layer 6@1X.png");
+}
+
+.widget {
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: white;
+    width: 581px;
+    height: 438px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.widget_left-side {
+    border-right: 0.5px solid #3C0404;
+    background-image: url("images/Layer 6@1X.png");
+    background-position: 84% 65%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-family: 'Dosis', sans-serif;
+    color: rgba(255, 255, 255, 255)
+}
+
+.widget_right-side {
+    font-family: 'Dosis', sans-serif;
+    color: rgba(119, 25, 33, 255);
+    border-left: 0.5px solid #3C0404;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.widget_left-side_forecast-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 290px;
+    height: 240px;
+}
+
+
+.widget_left-side_forecast-text{
+    font-size: 36pt;
+    line-height: 94px;
+    text-align: center;
+    background-image: url("images/Rounded Rectangle 2 copy@1X (1).png");
+    width: 290px;
+    height: 94px;
+}
+
+.widget_left-side_date  {
+    display: flex;
+    align-items: center;
+    font-size: 21pt;
+    text-align: center;
+    background-image: url("images/Rounded Rectangle 2@1X.png");
+    width: 290px;
+    height: 104px;
+}
+
+.widget_right-side_temperature {
+    margin-bottom: 26px;
+    display: flex;
+    height: auto;
+    font-size: 90pt;
+    border-bottom: 1px solid #771921;
+
+
+}
+
+.widget_right-side_graph {
+    border-bottom: 1px solid #771921;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.widget_right-side_week-forecast{
+    padding: 0;
+    align-self: center;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    height: 171px;
+    width: 209px;
+}
+
+.widget_right-side_day-forecast{
+    height: 145px;
+    width: 50px;
+    font-size: 16pt;
+    margin: 3px;
+
+}
+.widget_right-side_day-forecast div:last-child {
+    color: #332126;
+}
+.line {
+    border-bottom: 1px solid #771921;;
+}
+.graph{
+    position: relative;
+    bottom: 15px;
+}
+
